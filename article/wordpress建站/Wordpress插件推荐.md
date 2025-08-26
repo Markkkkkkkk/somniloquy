@@ -1,6 +1,6 @@
 ---
 category: [博客建站]
-tag: [wordpress插件]
+tag: [wordpress,插件]
 postType: post
 status: publish
 ---
@@ -761,10 +761,12 @@ Sitemap: https://blognas.hwb0307.com/sitemap_index.xml
 
 但这一块我也了解的不多。有机会再慢慢调试吧，有好的经验我会更新！
 
-## 小结
-
 如果你想进一步设置的话，可以去B站找找教学视频，比如这个：[B站视频：wordpress Yoast Seo后台设置教学](https://www.bilibili.com/video/BV1CS4y1A7tx)。
 
 不过我个人认为，如果**你坚持做好内容，并且多在内容平台曝光**，看你文章的人多了，网站比重高，搜索引擎自然就会收录你的文章。刚刚开始的个人博客，我觉得设置好那些基本的SEO就行了。
 
-另外，我偶然发现安装多语言支持插件（比如[插件 – GTranslate](https://blognas.hwb0307.com/linux/docker/1389)）会明显增加网站在bing等搜索引擎的曝光率。小伙伴们也可以试试看！
+另外，我偶然发现安装多语言支持插件（比如[插件 – GTranslate](https://hyly.net/categroy/article/code/wordpress/375/#header-id-7)）会明显增加网站在bing等搜索引擎的曝光率。小伙伴们也可以试试看！
+
+# 小结
+
+至此推荐Wordpress安装的插件就这么些了，在使用安装配置过程中有疑问的小伙伴可以在文章下方留言与我互动，有最新的资料我也会及时更新本文章，感兴趣的小伙伴请关注点赞哈~
