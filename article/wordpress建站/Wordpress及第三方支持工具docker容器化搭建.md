@@ -1,8 +1,8 @@
 ---
 category: [博客建站]
-tag: [argon,评论邮件退订]
+tag: [wordpress,matomo,uptime kuma,easyimage,图床,docker,监控]
 postType: post
-status: draft
+status: publish
 ---
 
 # 前言
