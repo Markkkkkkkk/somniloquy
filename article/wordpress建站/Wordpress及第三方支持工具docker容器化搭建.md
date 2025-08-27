@@ -58,7 +58,7 @@ services:
   # 因为bitnami/wordpress里面不太好安装php-redis扩展，但是自带了memcached扩展，所以不用redis容器了，改使用memcached跟reids一样是一个内存服务。
   memcached:
     image: bitnami/memcached:1.6.39
-    container_name: memcached
+    container_name: memcached 
     restart: unless-stopped
     networks:
       - wpnetwork

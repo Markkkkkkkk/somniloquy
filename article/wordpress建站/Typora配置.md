@@ -1,8 +1,8 @@
 ---
 category: [博客建站]
-tag: [typora,]
+tag: [typora,markdown,图床,博客]
 postType: post
-status: draft
+status: publish
 ---
 
 # 前言
@@ -205,12 +205,71 @@ Markdown对HTML的兼容性不错。 字体、图片、表格、视频等，自�
 
 经过转换，表格格式就正常了：
 
+![image-20250827122432098](https://image.hyly.net/i/2025/08/27/725b3a86571fb60f6d765397caaf4d80-0.webp)
 
+### 视频
+
+markdown里甚至可以嵌入视频！比如，嵌入一个B站视频：
+
+```
+<div style="position: relative; padding: 30% 45%;">
+<iframe src="//player.bilibili.com/player.html?aid=248179775&bvid=BV1ov41157UQ&cid=342169071&page=1&as_wide=1&high_quality=1&danmaku=0&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe>
+</div><br>
+```
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe src="//player.bilibili.com/player.html?aid=248179775&bvid=BV1ov41157UQ&cid=342169071&page=1&as_wide=1&high_quality=1&danmaku=0&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe>
+</div><br>
+
+嵌入一个Youtube视频：
+
+```
+<div style="position: relative; padding: 30% 45%;">
+<iframe src="https://www.youtube-nocookie.com/embed/aBCZuoXKzm4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
+</div><br>
+```
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe src="https://www.youtube-nocookie.com/embed/aBCZuoXKzm4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
+</div><br>
+
+链接可以在视频的分享图标里获得：
+
+![img](https://image.hyly.net/i/2025/08/27/6b08283e869d48b6ce1972bf4b56d083-0.webp)
+
+上述代码在PC端/移动端进行了优化，效果不错。大家可以试试看！
+
+### 音频
+
+> Resource: [【爱如潮水】指弹 不小心暴露了年龄。。。_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV15b4y1a7Dr)
+
+举个简单的例子：
+
+```
+<audio controls>
+  <source src="https://nextcloud.hwb0307.com/apps/sharingpath/test/public/audio/music-01.m4a" type="audio/mpeg">
+</audio>
+```
+
+<audio controls>
+  <source src="https://nextcloud.hwb0307.com/apps/sharingpath/test/public/audio/music-01.m4a" type="audio/mpeg">
+</audio>
 
 # 其它设置
 
+![image-20250827151516399](https://image.hyly.net/i/2025/08/27/a6f6f99dd17a63fc72ec45cf52d24783-0.webp)
 
+![image-20250827152712445](https://image.hyly.net/i/2025/08/27/43f68bf14716a828873ac13c068ce9ff-0.webp)
+
+![image-20250827152732232](https://image.hyly.net/i/2025/08/27/c0af5e98db41781257284d39c3cf04dc-0.webp)
+
+![image-20250827152755454](https://image.hyly.net/i/2025/08/27/1a79528f2b2ebdc3e61296d01ab66c8a-0.webp)
+
+# 小结
+
+Typora作为写博客工作流里一个重要的节点，我们要好好整一下，俗话说工欲善其事，必先利其器嘛。大家在使用过程中有什么疑问也欢迎在文章下方留言与我互动~喜欢本文章也欢迎点赞转发！
 
 # 拓展阅读
 
 1. [Typora 地表最强Markdown编辑器之一](https://blognas.hwb0307.com/skill/1734)
+
