@@ -400,7 +400,7 @@ W3 Total Cache 是一个WordPress 缓存优化插件，用于提升网站加载�
 
 ### 数据库缓存高级设置
 
-数据库缓存是把数据库从磁盘中查出来的结果缓存到内存中，从而提高查询速度，能尽快的给用户返回结果，所以它提示数据库缓存尽量不要选择磁盘存储，要选择Redis或Memcached。但是W3 Total Cache插件跟Redis数据库配置不太友好，没有Memcached一样只需要填写容器名称加端口号就能链接了。详细Memcached的安装可以看这篇文章。
+数据库缓存是把数据库从磁盘中查出来的结果缓存到内存中，从而提高查询速度，能尽快的给用户返回结果，所以它提示数据库缓存尽量不要选择磁盘存储，要选择Redis或Memcached。但是W3 Total Cache插件跟Redis数据库配置不太友好，没有Memcached一样只需要填写容器名称加端口号就能链接了。详细Memcached的安装可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/378#header-id-2)。
 
 ![image-20250822174548658](https://image.hyly.net/i/2025/08/22/13889f4dc7c41bf94c735cb08d586b1b-0.webp)
 
@@ -410,7 +410,7 @@ W3 Total Cache 是一个WordPress 缓存优化插件，用于提升网站加载�
 
 ### 对象缓存高级设置
 
-对象缓存主要是一些键值对什么的，跟数据库缓存配置差不多，也是选了Memcached作为内存缓存。详细的Memcached配置可以看这篇文章。
+对象缓存主要是一些键值对什么的，跟数据库缓存配置差不多，也是选了Memcached作为内存缓存。详细的Memcached配置可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/378#header-id-2)。
 
 ![image-20250822175225545](https://image.hyly.net/i/2025/08/22/fc8d65849bfa55347aaf1b835100b2ba-0.webp)
 
