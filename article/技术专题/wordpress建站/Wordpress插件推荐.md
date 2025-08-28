@@ -765,7 +765,7 @@ Sitemap: https://blognas.hwb0307.com/sitemap_index.xml
 
 不过我个人认为，如果**你坚持做好内容，并且多在内容平台曝光**，看你文章的人多了，网站比重高，搜索引擎自然就会收录你的文章。刚刚开始的个人博客，我觉得设置好那些基本的SEO就行了。
 
-另外，我偶然发现安装多语言支持插件（比如[插件 – GTranslate](https://hyly.net/categroy/article/code/wordpress/375/#header-id-7)）会明显增加网站在bing等搜索引擎的曝光率。小伙伴们也可以试试看！
+另外，我偶然发现安装多语言支持插件（比如[插件 – GTranslate](https://hyly.net/categroy/article/code/wordpress/380#header-id-7)）会明显增加网站在bing等搜索引擎的曝光率。小伙伴们也可以试试看！
 
 # 小结
 

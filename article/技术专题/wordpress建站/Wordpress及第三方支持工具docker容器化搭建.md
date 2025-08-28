@@ -466,7 +466,7 @@ docker load -i /usr/apps/images/ddsderek_easyimage2.8.6.tar
 
 弄完配置文件后重启下nginx容器`docker restart nginx`，然后域名`hyly.net`解析了服务器IP（域名如何解析IP看[这篇文章](https://hyly.net/categroy/article/code/wordpress/353#header-id-21)），就可以在浏览器里访问`https://你的域名`就可以访问Wordpress了。后台登陆地址为`https://你的域名/wp-admin`或`https://你的域名/wp-login.php`
 
-至此，wordpress就全部安装好了，为了增强wordpress的功能大家可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/375/)的插件推荐。想拥有一款漂亮的外观主题可以看这篇文章。
+至此，wordpress就全部安装好了，为了增强wordpress的功能大家可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/380)的插件推荐。想拥有一款漂亮的外观主题可以看这篇文章。
 
 # 第三方工具增强
 
@@ -743,7 +743,7 @@ server {
 
 ### 界面预览
 
-首次访问会进行初始化，初始化完毕之后在这里添加网站，这是我的详细配置，大家可以进行参考，其中要设置邮件通知SMTP，我是设置的QQ邮箱的，不懂怎么设置的小伙伴可以参考[这篇文章](https://hyly.net/categroy/article/code/wordpress/375#header-id-29)。
+首次访问会进行初始化，初始化完毕之后在这里添加网站，这是我的详细配置，大家可以进行参考，其中要设置邮件通知SMTP，我是设置的QQ邮箱的，不懂怎么设置的小伙伴可以参考[这篇文章](https://hyly.net/categroy/article/code/wordpress/380#header-id-29)。
 
 ![image-20250826172731148](https://image.hyly.net/i/2025/08/26/626f184ede7ce549dac11631152c8f8f-0.webp)
 
