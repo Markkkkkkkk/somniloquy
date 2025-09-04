@@ -5,7 +5,7 @@ postType: post
 status: publish
 ---
 
-# 前言
+## 前言
 
 在wordpress博客网站架构中，鉴于wordpress后台编写文章的低效性，文章都是通过本地编写markdown文件然后通过m2w接口上传到wordpress数据库的。既然文章是在本地电脑编写的，那么有一款趁手的markdown文件编写工具就很必要了，今天要介绍的就是Typora。
 
@@ -28,11 +28,11 @@ status: publish
 	3. Mermaid 流程图 / 序列图 / 甘特图
 	4. 图片插入支持（可自动上传到图床）
 
-# 软件安装与配置
+## 软件安装与配置
 
 大家可以从[官网](https://typoraio.cn/)下载安装，下载成功一步步点就安装完成了，应该不难。建议大家可以购买Typora的激活码，89元可以激活三台设备。如果还不能下决心的话可以先试用三十天再做决定。
 
-## 主题设置
+### 主题设置
 
 找一个好看的主题，可以让自己写文章更有动力，赏心悦目的主题也可以减少疲惫。就像WordPress博客一样，Typora也是有主题的，Typora官网提供了一些主题：[https://theme.typora.io](https://theme.typora.io/)。我自己用的这个主题叫[typora-vue-theme](https://github.com/blinkfox/typora-vue-theme)，是在Github里下载的。你也可以在Github里找一下别的Typora主题，估计开源的主题不少。**总有一款适合你**！我觉得`Vue`主题界面简洁清爽，颜色搭配也很协调，几经周转最终还是选择了它作为默认主题。下面，我以安装`typora-vue-theme`示范Typora主题的一般安装和使用方法！
 
@@ -54,7 +54,7 @@ status: publish
 
 一般主题的README文档会说明如何安装。有些主题的安装就会复杂一些，比如[VLOOK主题](https://github.com/MadMaxChow/VLOOK)。但总体上，我觉得即便是技术小白也可以轻松地hold住给Typora安装自定义主题的操作。
 
-## 自定义CSS
+### 自定义CSS
 
 原生主题中加粗字体的颜色是纯黑，这与非加粗字体的对比不够强烈。我希望换一个颜色，这样看上去会比较明显，符合加粗强调的含义：
 
@@ -71,7 +71,7 @@ status: publish
 
 ![image-20250826224708484](https://image.hyly.net/i/2025/08/26/7071647ed00345455cc781285d8ebab4-0.webp)
 
-## 快捷键
+### 快捷键
 
 Typora默认的快捷键大多数都还好。自己目前只修改了一个快捷键，你想修改其它快捷键是类似操作。
 
@@ -79,7 +79,7 @@ Typora默认的快捷键大多数都还好。自己目前只修改了一个快�
 
 ![image-20250826225344116](https://image.hyly.net/i/2025/08/26/2aeba99d1aa58e677d307c44103b3d45-0.webp)
 
-## 目录自动编号
+### 目录自动编号
 
 > 参考[lipengzhou/typora-theme-auto-numbering: Typora 主题自动编号](https://github.com/lipengzhou/typora-theme-auto-numbering)
 
@@ -99,19 +99,19 @@ Typora默认的快捷键大多数都还好。自己目前只修改了一个快�
 
 ![image-20250827100224386](https://image.hyly.net/i/2025/08/27/bf9b2a16f949c06a36eb331c7bec01a0-0.webp)
 
-# 基本语法
+## 基本语法
 
 想了解详细基础语法的小伙伴可以看[这篇文章](https://www.runoob.com/markdown/md-tutorial.html)。
 
-# 进阶使用
+## 进阶使用
 
-## 图床
+### 图床
 
 写markdown怎么能少得了图床呢，关于图床的搭建大家可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/378/#header-id-16)。
 
 图床搭建完成之后就是该如何使用了。我的基本路线是：在typora里粘贴图片然后通过picList调用接口的方式就可以把图片上传到图床了。
 
-### 图床工作流搭建
+#### 图床工作流搭建
 
 首先下载picList，能翻墙的小伙伴去[这里下载](https://github.com/Kuingsmile/PicList/releases)，条件不允许的可以在[这里下载](https://url62.ctfile.com/d/61737562-154661282-7f7d1f?p=8732)。
 
@@ -145,7 +145,7 @@ Windows系统：
 
 ![PixPin_2025-08-27_11-55-20](https://image.hyly.net/i/2025/08/27/aaad2e59d1d03194716557d2eb3ab895-0.webp)
 
-## 表情
+### 表情
 
 > 可以参考[markdown表情包](https://www.webfx.com/tools/emoji-cheat-sheet/)
 
@@ -155,11 +155,11 @@ Windows系统：
 
 ![image-20250827120422432](https://image.hyly.net/i/2025/08/27/cf00f3bdda7e1787ea5b28831389c45e-0.webp)
 
-## 在Markdown中使用HTML
+### 在Markdown中使用HTML
 
 Markdown对HTML的兼容性不错。 字体、图片、表格、视频等，自定义程度更强！
 
-### 字体
+#### 字体
 
 写一些奇怪的字：
 
@@ -169,7 +169,7 @@ Markdown对HTML的兼容性不错。 字体、图片、表格、视频等，自�
 
 <font face="黑体" color="#009688" size=6>我们是看故事的人，故事里的人是我们。</font>
 
-### 图片
+#### 图片
 
 插入一个图片：
 
@@ -179,7 +179,7 @@ Markdown对HTML的兼容性不错。 字体、图片、表格、视频等，自�
 
 <img src="https://chevereto.hwb0307.com/images/2023/03/19/bbmb-80.jpg" alt="bbmb-80.jpg" border="0" />
 
-### 表格
+#### 表格
 
 强烈建议使用html代码进行表格的表述，这样对HTML的兼容性会更好。 比如：
 
@@ -207,7 +207,7 @@ Markdown对HTML的兼容性不错。 字体、图片、表格、视频等，自�
 
 ![image-20250827122432098](https://image.hyly.net/i/2025/08/27/725b3a86571fb60f6d765397caaf4d80-0.webp)
 
-### 视频
+#### 视频
 
 markdown里甚至可以嵌入视频！比如，嵌入一个B站视频：
 
@@ -239,7 +239,7 @@ markdown里甚至可以嵌入视频！比如，嵌入一个B站视频：
 
 上述代码在PC端/移动端进行了优化，效果不错。大家可以试试看！
 
-### 音频
+#### 音频
 
 > Resource: [【爱如潮水】指弹 不小心暴露了年龄。。。_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV15b4y1a7Dr)
 
@@ -255,7 +255,7 @@ markdown里甚至可以嵌入视频！比如，嵌入一个B站视频：
   <source src="https://nextcloud.hwb0307.com/apps/sharingpath/test/public/audio/music-01.m4a" type="audio/mpeg">
 </audio>
 
-# 其它设置
+## 其它设置
 
 ![image-20250827151516399](https://image.hyly.net/i/2025/08/27/a6f6f99dd17a63fc72ec45cf52d24783-0.webp)
 
@@ -265,11 +265,11 @@ markdown里甚至可以嵌入视频！比如，嵌入一个B站视频：
 
 ![image-20250827152755454](https://image.hyly.net/i/2025/08/27/1a79528f2b2ebdc3e61296d01ab66c8a-0.webp)
 
-# 小结
+## 小结
 
 Typora作为写博客工作流里一个重要的节点，我们要好好整一下，俗话说工欲善其事，必先利其器嘛。大家在使用过程中有什么疑问也欢迎在文章下方留言与我互动~喜欢本文章也欢迎点赞转发！
 
-# 拓展阅读
+## 拓展阅读
 
 1. [Typora 地表最强Markdown编辑器之一](https://blognas.hwb0307.com/skill/1734)
 

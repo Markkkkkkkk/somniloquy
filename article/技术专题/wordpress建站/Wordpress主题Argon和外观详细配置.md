@@ -5,15 +5,15 @@ postType: post
 status: publish
 ---
 
-# 前言
+## 前言
 
 经过前面文章的学习，相信小伙伴们已经搭建好了一个基础博客，界面啥的还都是默认的，但是颜值即正义嘛~漂亮的页面和丝滑的操作读文章也会开心很多，经过本文章的学习，大家会有一个炫酷好看博客的~
 
 经过多方调研，最终选定了[Argon](https://github.com/solstice23/argon-theme)这款主题，首先它文档相对完善，国内用户多，能找到一些教程或魔改思路。界面美观，功能相对完整，自带文章目录（TOC）、代码高亮、文章点赞/打赏、分享功能。评论区美化，内置表情、Ajax 评论。支持 Banner 图、文章封面、卡片式排版等。访问速度也较快，前端资源经过优化，CSS/JS体积不算太大，支持懒加载、部分功能异步加载，利于性能和 SEO。内置基础 SEO 优化（标题、描述、Open Graph 等）。结构化数据支持较友好。
 
-# Argon主题配置
+## Argon主题配置
 
-## 安装
+### 安装
 
 由于Argon是第三方主题，所以不能在wordpress插件市场里直接安装，需要下载主题压缩包上传安装。首先在[Github](https://github.com/solstice23/argon-theme/releases)下载压缩包，不能翻墙的小伙伴可以从这里下载。下载完成后直接在插件列表这里上传插件即可：
 
@@ -23,13 +23,13 @@ status: publish
 
 ![image-20250902102407309](https://image.hyly.net/i/2025/09/02/237f252aa8da66d906cf7f81b64e4cc0-0.webp)
 
-## 详细配置
+### 详细配置
 
 安装完成后可以在左侧菜单栏找到**Argon主题选项**菜单就可以进行设置了，以下是我的详细设置，大家可以参考：
 
 ![image-20250902112325366](https://image.hyly.net/i/2025/09/02/05c2bf410266060d3a52e090637018f8-0.webp)
 
-# 特效配置
+## 特效配置
 
 除了Argon对页面的美化，我们还加入了一些自定义的美化，大家可以根据自己需要添加。他们都是基于`/usr/apps/blog/wordpressData/wp-content/themes/argon/footer.php`文件进行添加的。
 
@@ -41,7 +41,7 @@ status: publish
 
 这样做的原因有两个：（1）分开托管逻辑比较清晰，源代码不容易因为更新丢失（禁用了argon自动更新，然后还有备份，其实还好）
 
-## common.php文件
+### common.php文件
 
 在`在footer.php`同级目录新建文件夹和文件`/specialEffects/common.php`，以下是详细内容，图省事可以直接复制使用，下方有详细说明。
 
@@ -658,7 +658,7 @@ button#fabtn_back_to_top, button#fabtn_go_to_comment, button#fabtn_toggle_blog_s
 
 ```
 
-### 全屏雪花/樱花/烟花特效
+#### 全屏雪花/樱花/烟花特效
 
 这里提供的特效，在手机等设备是不生效的。因为手机的界面太小，特效会导致观看效果很差。设备判断主要利用mobile-detect项目提供的JS脚本（随机图API的php脚本也是类似的）。
 
@@ -736,7 +736,7 @@ button#fabtn_back_to_top, button#fabtn_go_to_comment, button#fabtn_toggle_blog_s
 
 ![img](https://image.hyly.net/i/2025/09/02/b9f38c10444542b8fc2c794d7ae611b5-0.gif)
 
-### 鼠标指针特效之仙女棒
+#### 鼠标指针特效之仙女棒
 
 来源于halo的[dream主题](https://github.com/nineya/halo-theme-dream)鼠标移动特效“仙女棒”，特效美观，自然：
 
@@ -763,7 +763,7 @@ button#fabtn_back_to_top, button#fabtn_go_to_comment, button#fabtn_toggle_blog_s
 ```
 
 
-### 卡片3D特效
+#### 卡片3D特效
 
 > 来自中秋明月的[个人博客](https://iphoto.store/)。源项目地址：[vanilla-tilt.js](https://github.com/micku7zu/vanilla-tilt.js)
 
@@ -848,7 +848,7 @@ button#fabtn_back_to_top, button#fabtn_go_to_comment, button#fabtn_toggle_blog_s
 
 对于Argon主题的使用者，这样就可以了！在Argon主题中，`window.pjaxLoaded`函数内的命令会避免使用Pjax并在切换页面时强制刷新，这个必须要用才可以保证特效的完美运行。如果是其它主题的话，你改一下控制对象的名字即可，具体情况具体分析。**你也可以自己改动一下参数，看看效果如何**。蛮有趣的一个特效！
 
-### 鼠标文字特效
+#### 鼠标文字特效
 
 和雪花特效是一样的用法。在末尾`</body>`上方加入。当然`a`变量中的文字就自定义了！你可以改成自己喜欢的文字。
 
@@ -891,7 +891,7 @@ button#fabtn_back_to_top, button#fabtn_go_to_comment, button#fabtn_toggle_blog_s
 ```
 
 后面有小伙伴说影响双击选中单词，我就没上这个特效了。
-### 文内外跳转
+#### 文内外跳转
 
 > 理论上适用于h1-h6标签；仅限argon主题。感谢[鸦鸦](https://crowya.com/)的改进！
 
@@ -967,7 +967,7 @@ window.addEventListener('load', function() {
 
 日后再想办法修复吧，或者看看其它小伙伴的意见！
 
-### 文字输入撒花特效
+#### 文字输入撒花特效
 
 主要参考突突的教程：https://wangwangyz.site/archives/1059
 
@@ -982,7 +982,7 @@ window.addEventListener('load', function() {
 <script src="https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/js/input-with-fire.js"></script>
 ```
 
-### 网站标题可爱字符
+#### 网站标题可爱字符
 
 主要参考[likepoems](https://likepoems.com/liuyan#comment-61)大佬的网站。类似效果为：
 
@@ -997,7 +997,7 @@ window.addEventListener('load', function() {
  <!--<script src="https://cdn.jsdelivr.net/gh/huangwb8/bloghelper@latest/js/onfocus.js"></script> -->
 ```
 
-### 文字颤抖
+#### 文字颤抖
 
 效果大致如下：
 
@@ -1020,7 +1020,7 @@ window.addEventListener('load', function() {
 
 ![chrome_pdXQHz2dy7](https://image.hyly.net/i/2025/09/02/3f43f02de157842436f2030e4be3d818-0.webp)
 
-### WordPress防镜像
+#### WordPress防镜像
 
 有时候别人会把域名`CNAME`解析到我们的域名上边来，然后做镜像站，为了防止这样可以在页面上判断如果根域名不是源站重新跳转刷新下页面，设置如下：
 
@@ -1039,7 +1039,7 @@ if (!allowedDomains.includes(currentHost)) {
 ' />
 ```
 
-### 正文自动添加序号
+#### 正文自动添加序号
 
 效果如下：
 
@@ -1052,7 +1052,7 @@ if (!allowedDomains.includes(currentHost)) {
 <style type="text/css">h1:not(.title){counter-reset:h2counter;counter-increment:h1counter;}h1:not(.title):not(.post-title)::before{content:counter(h1counter) " ";}h2{counter-reset:h3counter;counter-increment:h2counter;}h2:not(.comments-title):not(.post-comment-title)::before{content:counter(h1counter) "." counter(h2counter) " ";}h3{counter-reset:h4counter;counter-increment:h3counter;}h3:not(.text-black)::before{content:counter(h1counter) "." counter(h2counter) "." counter(h3counter) " ";}h4{counter-reset:h5counter;counter-increment:h4counter;}h4:not(.modal-title)::before{content:counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) " ";}h5:not(.modal-title){counter-reset:h6counter;counter-increment:h5counter;}h5::before{content:counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) " ";}h6:not(#leftbar_overview_author_name):not(#leftbar_overview_author_description){counter-increment:h6counter;}h6:not(#leftbar_overview_author_name):not(#leftbar_overview_author_description)::before{content:counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) "." counter(h6counter) " ";}body{counter-reset:h1counter;}</style>
 ```
 
-### Argon主题点击概要也可以进入文章
+#### Argon主题点击概要也可以进入文章
 
 在默认情况下，我们的文章只能通过点击标题（绿色框）进入。按这个设置后，你点击概要（红色框）也可以进入文章！
 
@@ -1077,7 +1077,7 @@ function pjaxNavigate(url) {
 
 ![img](https://image.hyly.net/i/2025/09/02/81b0c1dfc4fcc75c6b3e280eabfb3302-0.webp)
 
-### 字体
+#### 字体
 
 字体可以在[字体天下](https://www.fonts.net.cn/)、[100font](https://www.100font.com/)等网站里免费下载。通过[转换](https://cloudconvert.com/ttf-to-woff2)网站获得woff2格式文件。你可以上传到网站根目录或者某个CDN里，然后添加下列额外CSS（具体方法见下）：
 
@@ -1095,7 +1095,7 @@ body{
 
 这里展示所用的`13.woff2`是**汉唐仪美人体**，它并不是`免费商用字体`。个人博客毕竟是公开的，最好还是使用`免费商用字体`，以免未来有版权纠纷。你也可以在[bloghelper](https://github.com/huangwb8/bloghelper/tree/main/fonts)里看看我之前找过的某些字体，都蛮漂亮的。`font-family: "LXGW WenKai Screen", sans-serif;` 也是个不错的字体。**下文的额外CSS包含了字体设置**，多加注意。
 
-### 小工具-时间进度条
+#### 小工具-时间进度条
 
 > 仅限argon主题。
 
@@ -1231,7 +1231,7 @@ let part1OffsetTop = document.getElementById('open_sidebar').offsetParent == nul
 - 后面两处代码的开头没有`let`
 - 如果您使用了CDN托管argon主题资源，您应该去CDN托管的后台里修改`argontheme.js`文件
 
-### 额外CSS
+#### 额外CSS
 
 > 仅限argon主题。
 
@@ -1587,7 +1587,7 @@ button#fabtn_back_to_top, button#fabtn_go_to_comment, button#fabtn_toggle_blog_s
 
 ![chrome_0dEZyK2GCm](https://image.hyly.net/i/2025/09/02/ff6637b40bdf191058b6e4cd9f948d1e-0.webp)
 
-### font awesome v7
+#### font awesome v7
 
 v7有一些特别的图标。在`/usr/apps/blog/wordpressData/wp-content/themes/argon/functions.php`里添加以下代码：
 
@@ -1602,7 +1602,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome_shim' );
 
 在这里搜索图标：https://fontawesome.com/search。与v4版本相比有很多新的图标。
 
-### 悼念色
+#### 悼念色
 
 遇到国家重要人物逝世、抗战纪念日等重大时点，为了表示悲悼，很多网站会选择全黑白的配色。效果如下：
 
@@ -1626,7 +1626,7 @@ html {
 
 该CSS代码对于任何WordPress主题都是适用的。
 
-### 春节灯笼挂件
+#### 春节灯笼挂件
 
 > 参考《[WordPress 博客添加春节红灯笼挂件](https://wuzuhua.cn/3574.html)》
 
@@ -1673,7 +1673,7 @@ document.write('<div class="deng-box1"><div class="deng"><div class="xian"></div
 
 ![image-20230101163417424](https://image.hyly.net/i/2025/09/02/f7bcf41a6a6bb8467b27ca29764e417d-0.webp)
 
-###  运行时间、耗时及占用内存
+####  运行时间、耗时及占用内存
 
 在`footer.php`同级目录新建文件夹和文件`/specialEffects/timeRAM.php`，以下是详细内容，图省事可以直接复制使用，下方有详细说明。
 
@@ -1717,7 +1717,7 @@ setTimeout(momxc, 1000);
 
 ![image-20250902201210232](https://image.hyly.net/i/2025/09/02/1385a1c7a8907cefd2fd25ba8a777d94-0.webp)
 
-### 禁用wordpress大小写转换器
+#### 禁用wordpress大小写转换器
 
 问题源于我文章名都是用**wordpress**小写或者不标准的大小写，发布文章的时候WordPress会转换成标准的**WordPresss**文章名，导致发布的名称不对，再次使用m2w发布文章的时候获取文章列表跟本地的对比就对比不上，文章就会重新发布。解决起来也很简单，只需要在`funtions.php`添加以下代码即可：
 
@@ -1728,7 +1728,7 @@ remove_filter( 'the_content', 'capital_P_dangit', 11 );
 remove_filter( 'comment_text', 'capital_P_dangit', 31 );
 ```
 
-# Wordpress页面配置
+## Wordpress页面配置
 
 新近成立的个人博客通常还会有一些特殊页面，比如`关于我`、`留言板`、`说说`、`友情链接`、`归档`、`隐私政策`等。它会让你的博客布局更加丰满、更加成熟一些。它们均可以通过`页面`来进行配置。
 
@@ -1736,7 +1736,7 @@ remove_filter( 'comment_text', 'capital_P_dangit', 31 );
 
 ![image-20250902230024787](https://image.hyly.net/i/2025/09/02/e6bf1bbff6c0eb78ed23205c76982e03-0.webp)
 
-## 留言板
+### 留言板
 
 首先我们添加一个页面，标题写为留言板然后把模板设置为留言板就可以了：
 
@@ -1748,7 +1748,7 @@ remove_filter( 'comment_text', 'capital_P_dangit', 31 );
 
 接下来把它添加到菜单里就可以了，等会我们统一添加。
 
-## 关于我
+### 关于我
 
 我们新建一个`关于我`的页面用于自我介绍。我觉得这个页面是比较重要的，它可以**让访客快速了解你**。
 
@@ -1758,7 +1758,7 @@ remove_filter( 'comment_text', 'capital_P_dangit', 31 );
 
 模板用默认的就行。`文章设置`可以自己自定义，这个看自己喜好。
 
-## 友情链接
+### 友情链接
 
 **友情链接其实是非常重要的**！这或许是一个最简单的SEO了！简单来说，就是互加一些志同道合的朋友，在一定程度上可以增加自己网站的曝光度。知乎上也有相关的问题及回答，比如：[友情链接有什么用？详解友链的四大作用？](https://zhuanlan.zhihu.com/p/254930811)。自己去了解吧！
 
@@ -1850,7 +1850,7 @@ remove_filter( 'comment_text', 'capital_P_dangit', 31 );
 
 ![image-20250902233122202](https://image.hyly.net/i/2025/09/02/91dc3523afafb2bf00f4adbc32ef12a7-0.webp)
 
-## 归档/时光轴
+### 归档/时光轴
 
 新建一个归档页面，模板主要选为**归档时间轴**即可：
 
@@ -1862,7 +1862,7 @@ remove_filter( 'comment_text', 'capital_P_dangit', 31 );
 
 记得刚刚开始设置的时候，对于`页面`的概念不是很理解，不太清楚它和`文章`的区别。现在我知道，**WordPress页面适合用来适合一些数量和内容均比较有限的信息**。其实和文章没有太大的区别！
 
-# Wordpress菜单配置
+## Wordpress菜单配置
 
 ![image-20250903103737048](https://image.hyly.net/i/2025/09/03/177f07134dcb878fe1b2b63ed843e2e2-0.webp)
 
@@ -1870,16 +1870,16 @@ remove_filter( 'comment_text', 'capital_P_dangit', 31 );
 
 ![image-20250903104157688](https://image.hyly.net/i/2025/09/03/4c74753a9c48c52150fb783ef9dda521-0.webp)
 
-# 小工具配置
+## 小工具配置
 
 小工具可以在外观->小工具这里可以配置的：
 
 ![image-20250903105037250](https://image.hyly.net/i/2025/09/03/e9c7ef29f734e099c98d5600e307b0c7-0.webp)
 
-# 小结
+## 小结
 
 相信大家经过上面的设置，博客会变得比之前炫酷多了，如果配置过程中有什么问题可以在文章下方留言，喜欢的小伙伴也麻烦多点赞转发哈~
 
-# 扩展阅读
+## 扩展阅读
 
 1. [Docker系列 WordPress系列 特效](https://blognas.hwb0307.com/linux/docker/744)

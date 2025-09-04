@@ -5,7 +5,7 @@ postType: post
 status: publish
 ---
 
-# 问题发现
+## 问题发现
 
 小伙伴们在给热门文章评论的时候填入自己邮箱会有邮件提醒这个功能，当有人回复自己评论的时候会有邮件通知，能及时回复消息。
 
@@ -21,13 +21,13 @@ status: publish
 
 我查阅了一些资料之后发现这是wordpress的主题Argon的一些小BUG，经过多番查阅资料才解决了问题，给自己点个大大的赞！~**:smile:**
 
-# 问题解决
+## 问题解决
 
 经过多番查找资料，在argon的github [issue](https://github.com/solstice23/argon-theme/issues/75)里面有人提到过这个问题，作者也给出了解决办法，但是自己用bitnami/wordpress镜像docker compose 启动的根本不适用。。。
 
 ![image-20250820173338202](https://image.hyly.net/i/2025/08/20/cc97a0a3876bea9da812de175eb57ed8-0.webp)
 
-## nginx配置文件修改
+### nginx配置文件修改
 
 不过经由作者提醒，这是因为评论邮件退订链接是单独的一个链接访问的，不是由首页一步步点进去的，所以nginx找不到退订处理的php文件，需要经由nginx路由转发一下。只有红框里的起作用，为了`wordpress.conf`文件完整给大家参考，就把配置文件都贴出来了。转发规则如下：
 
@@ -96,7 +96,7 @@ status: publish
 
 ![image-20250820174200253](https://image.hyly.net/i/2025/08/20/3b546783bf5e7bc04a2391b6b11bc4c9-0.webp)
 
-## bitnami/wordpress容器配置文件修改
+### bitnami/wordpress容器配置文件修改
 
 转发到bitnami/wordpress容器里的php-fpm处理了，但是容器里的php-fpm没有启动，而且默认配置文件时unix套接字的，不是端口监听，所以还需要再改下`docker-compose.yml`文件里wordpress的配置：
 
@@ -188,7 +188,7 @@ sudo chmod -R 777 /usr/apps/blog/wordpressData/conf
 sudo chmod -R 777 /usr/apps/blog/wordpressData/wordpressSH
 ```
 
-## argon评论邮件退订php文件修改
+### argon评论邮件退订php文件修改
 
 `/usr/apps/blog/wordpressData/wp-content/themes/argon/unsubscribe-comment-mailnotice.php`
 
@@ -210,6 +210,6 @@ sudo chmod -R 777 /usr/apps/blog/wordpressData/wordpressSH
 
 ![image-20250820184402710](https://image.hyly.net/i/2025/08/20/4e51926e47e06386910b6aedffac7080-0.webp)
 
-# 小结
+## 小结
 
 在问题解决过程中有疑问的小伙伴可以在文章下方留言与我互动，有最新的资料我也会及时更新本文章，感兴趣的小伙伴请关注点赞哈~

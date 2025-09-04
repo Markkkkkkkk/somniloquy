@@ -5,13 +5,13 @@ postType: post
 status: publish
 ---
 
-# 前言
+## 前言
 
 当初决定使用Wordpress有一个关键点就是其拥有强大的插件系统，可以像可替换武器库一样给wordpress这个基础配备强大的火力，这也是吸引我的一点。符合我当初博客选定的要求：
 
 > 选型要求：花20%的精力就能达到80%的效果。并且博客平台有一定想象拓展空间，可以更精进一步。当然使用人数要多社区活跃，解决问题也好解决。
 
-# Akismet
+## Akismet
 
 Akismet 是 WordPress 官方出品的一个反垃圾插件/服务，主要用来自动过滤垃圾评论和垃圾表单提交。这个插件默认就已经安装了，只需要启用就可以了，没有安装的可以在插件市场搜索安装启用：
 
@@ -23,7 +23,7 @@ Akismet 是 WordPress 官方出品的一个反垃圾插件/服务，主要用来
 
 首先需要注册一个账号，完成之后会有一个密钥填写进去，然后设置下评论的基础选项就可以了，因为博主自己也没有遇到过垃圾评论的情况，也不知道好不好用，不过既然官网推荐的，先安装上吧，有总比没有强。╮(╯▽╰)╭
 
-# Custom Post Type UI
+## Custom Post Type UI
 
 Custom Post Type UI主要用来创建和管理自定义文章类型和自定义分类法。
 
@@ -46,7 +46,7 @@ Custom Post Type UI主要用来创建和管理自定义文章类型和自定义�
 
 ![image-20250821205444282](https://image.hyly.net/i/2025/08/21/552cf797332eae7ab8af8bbc3c25216e-0.webp)
 
-## 使用
+### 使用
 
 首先在插件市场安装启用：
 
@@ -66,7 +66,7 @@ Custom Post Type UI主要用来创建和管理自定义文章类型和自定义�
 
 ![image-20250821214444631](https://image.hyly.net/i/2025/08/21/42312c11e20299dd94d056bf246f1191-0.webp)
 
-## 根据分类查询说说
+### 根据分类查询说说
 
 文件位于`/usr/apps/blog/wordpressData/wp-content/themes/argon/functions.php`，接下来还应在functions.php文件添加以下配置：
 
@@ -86,7 +86,7 @@ add_action('pre_get_posts', 'fix_custom_post_type_category_archive');
 
 至此就能实现wordpress后台发布说说时添加分类，然后前端页面根据分类搜索出对应分类的说说了。
 
-##  实现说说接口增删改查功能
+###  实现说说接口增删改查功能
 如果是后台编写说说并发布的小伙伴到这里就可以了。但是我们是通过m2w工具接口上传说说/文章到wordpress，所以为了提供说说上传接口能正确的添加说说分类，我们还需要创建说说的增删改查函数并赋予正确的分类。同样是在`functions.php`文件最后边添加：
 
 ```
@@ -297,7 +297,7 @@ function get_shuoshuo_list_callback($request) {
 
 添加这些就可以实现用m2w工具对说说的增删改查了，m2w具体如何使用看这篇文章。
 
-# Easy Updates Manager
+## Easy Updates Manager
 
 它是 WordPress 的一个更新管理插件，作用是 集中控制和管理站点所有更新。
 
@@ -318,11 +318,11 @@ function get_shuoshuo_list_callback($request) {
 
 ![image-20250829232513359](https://image.hyly.net/i/2025/08/29/831bcf00a022565818f348398c179e77.webp)
 
-# GTranslate
+## GTranslate
 
 GTranslate是一个可以让博客文章实现多语言的插件，它是调用谷歌翻译API然后实现对全站的翻译，但是有个小问题就是如果是国内用户访问网站使用翻译的话，因为国内访问不了谷歌翻译API，所以它是不能使用的，只有国外用户使用翻译才能正确翻译，但是网站默认语言是中文的，所以这好像也不算是个问题哈~
 
-## 安装配置
+### 安装配置
 
 首先在插件市场进行安装启用：
 
@@ -338,13 +338,13 @@ GTranslate是一个可以让博客文章实现多语言的插件，它是调用�
 
 这个插件好处就是可以当前页面全部翻译，简单省事。而不像有的插件，你必须自己一个个中文对照的英文键值对填入插件，它才给翻译。
 
-# Permalink Manager Lite
+## Permalink Manager Lite
 
 它的作用主要是管理和自定义站点的固定链接，说说/文章/页面/分类链接等。比方说想按照大分类/小分类/id，这样来构造文章的固定链接，或者想给某个页面/文章一个不属于上述规则的特殊固定链接，这个插件就都可以做到。wordpress默认的固定链接结构则很死板，没法更多的定制化。
 
 ![image-20250822152333321](https://image.hyly.net/i/2025/08/22/11a5abc41e7b89c35c67d538c2807d90-0.webp)
 
-## 使用配置
+### 使用配置
 
 首先插件市场进行安装启用：
 
@@ -366,11 +366,11 @@ GTranslate是一个可以让博客文章实现多语言的插件，它是调用�
 
 ![msedge_rkgcJcZteo](https://image.hyly.net/i/2025/08/25/12fdb8215719b4f4c1b9c1dfcf8a11d4-0.webp)
 
-# W3 Total Cache
+## W3 Total Cache
 
 W3 Total Cache 是一个WordPress 缓存优化插件，用于提升网站加载速度和性能。它通过缓存技术减少服务器负担，提高页面的响应速度，尤其对于流量较大的站点非常有帮助。安装了这个插件基本上就不用再安装其他的缓存提速插件了，这款就非常的强大！
 
-## 主要功能
+### 主要功能
 
 1. **页面缓存 (Page Cache)**
 	1. 缓存整个页面的 HTML 输出，减少每次访问时都需要从头开始生成页面。
@@ -393,7 +393,7 @@ W3 Total Cache 是一个WordPress 缓存优化插件，用于提升网站加载�
 8. **分布式缓存支持 (Reverse Proxy Cache)**
 	1. 支持与 **Varnish**、**Nginx**、**Apache** 等反向代理服务器的集成，进一步优化缓存策略。
 
-## 使用配置
+### 使用配置
 
 首先是插件市场搜索安装启用：
 
@@ -403,7 +403,7 @@ W3 Total Cache 是一个WordPress 缓存优化插件，用于提升网站加载�
 
 ![image-20250822164921338](https://image.hyly.net/i/2025/08/22/645f7683a2eac30d9f81417d2abf5a12-0.webp)
 
-### 常规配置
+#### 常规配置
 
 因为配置项有很多，大家按照我截图的参照着来就行了：
 
@@ -411,15 +411,15 @@ W3 Total Cache 是一个WordPress 缓存优化插件，用于提升网站加载�
 
 > TIPS：一定不要勾选用户体验->延迟加载图像这个选项，会造成站点概览页面头像的显示和页面底部赞赏码的显示。
 
-### 页面缓存高级设置
+#### 页面缓存高级设置
 
 ![image-20250822174010648](https://image.hyly.net/i/2025/08/22/a49f46d2fe454ca1cc8b12d332873cee-0.webp)
 
-### 压缩高级设置
+#### 压缩高级设置
 
 ![image-20250822174135506](https://image.hyly.net/i/2025/08/22/55eeddd15601ed80d6beea4cfdb629a7-0.webp)
 
-### 数据库缓存高级设置
+#### 数据库缓存高级设置
 
 数据库缓存是把数据库从磁盘中查出来的结果缓存到内存中，从而提高查询速度，能尽快的给用户返回结果，所以它提示数据库缓存尽量不要选择磁盘存储，要选择Redis或Memcached。但是W3 Total Cache插件跟Redis数据库配置不太友好，没有Memcached一样只需要填写容器名称加端口号就能链接了。详细Memcached的安装可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/378#header-id-2)。
 
@@ -429,19 +429,19 @@ W3 Total Cache 是一个WordPress 缓存优化插件，用于提升网站加载�
 
 ![image-20250822174320419](https://image.hyly.net/i/2025/08/22/26dd84b96a7d928f493ce665dc3aec78-0.webp)
 
-### 对象缓存高级设置
+#### 对象缓存高级设置
 
 对象缓存主要是一些键值对什么的，跟数据库缓存配置差不多，也是选了Memcached作为内存缓存。详细的Memcached配置可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/378#header-id-2)。
 
 ![image-20250822175225545](https://image.hyly.net/i/2025/08/22/fc8d65849bfa55347aaf1b835100b2ba-0.webp)
 
-### 浏览器缓存高级设置
+#### 浏览器缓存高级设置
 
 这个基本上都是默认配置，大家只需要跟自己的配置简单对照下异同即可。
 
 ![image-20250822180554053](https://image.hyly.net/i/2025/08/22/52852494842532b78624acd457bb0827-0.webp)
 
-### Network Performance & Security powered by Cloudflare高级设置
+#### Network Performance & Security powered by Cloudflare高级设置
 
 W3 Total Cache这个配置是跟Cloudflare连接，起到统一管理作用，需要取得Cloudflare密钥然后填入这里：
 
@@ -449,7 +449,7 @@ W3 Total Cache这个配置是跟Cloudflare连接，起到统一管理作用，�
 
 密钥获取设置方式如下：
 
-#### 获取 Cloudflare API Key 的方法
+##### 获取 Cloudflare API Key 的方法
 
 1. 登录 Cloudflare 控制台
 2. 进入“我的个人资料”，点击右上角头像 → My Profile（我的资料）
@@ -471,19 +471,19 @@ W3 Total Cache这个配置是跟Cloudflare连接，起到统一管理作用，�
 
 保存后，W3TC 就能帮你自动清理 Cloudflare 缓存、同步优化设置。
 
-#### 详细高级配置
+##### 详细高级配置
 
 ![image-20250822182542442](https://image.hyly.net/i/2025/08/22/1da74cace5043b551a8ad3867fdf82aa-0.webp)
 
-# Wordfence Security
+## Wordfence Security
 
 这个已经在[服务器与博客网站安全](https://hyly.net/categroy/article/code/wordpress/353/#header-id-7)这篇文章里详细介绍过了，这里就不再赘述了。
 
-# WPS Hide Login
+## WPS Hide Login
 
 这个已经在[服务器与博客网站安全](https://hyly.net/categroy/article/code/wordpress/353/#header-id-14)这篇文章里详细介绍过了，这里就不再赘述了。
 
-# WordPress Popular Posts
+## WordPress Popular Posts
 
 这个插件你可以理解为 “文章热度榜”工具，主要是用来提高网站文章曝光率和用户粘性 —— 把最受欢迎的文章展示出来，引导访客继续浏览，从而提升 PV 和停留时间。功能如下：
 
@@ -502,7 +502,7 @@ W3 Total Cache这个配置是跟Cloudflare连接，起到统一管理作用，�
 	1. 提供 **短代码** 和 **PHP 模板标签**，方便插入到任何位置。
 	2. 也能配合自定义样式，让热门文章模块更符合主题风格。
 
-## 使用配置
+### 使用配置
 
 首先插件市场安装启用：
 
@@ -520,7 +520,7 @@ W3 Total Cache这个配置是跟Cloudflare连接，起到统一管理作用，�
 
 ![image-20250825161134025](https://image.hyly.net/i/2025/08/25/adb5b71b835978c5046fcff97becf851-0.webp)
 
-# WP External Links
+## WP External Links
 
 这个插件在 WordPress 里主要是用来 **统一管理站点中外部链接的行为**。
 
@@ -538,7 +538,7 @@ W3 Total Cache这个配置是跟Cloudflare连接，起到统一管理作用，�
 6. **安全性**
 	1. 通过自动加 `noopener noreferrer` 防止 **tabnabbing 攻击**（新窗口劫持）。
 
-## 使用方法
+### 使用方法
 
 1. **安装插件**
 	 在 WP 后台 → 插件 → 安装 → 搜索 `WP External Links` → 安装并启用。
@@ -593,11 +593,11 @@ W3 Total Cache这个配置是跟Cloudflare连接，起到统一管理作用，�
 	2. **区别于 `nofollow`**：`ugc` 明确告诉搜索引擎 “这是用户生成的链接”，更精细化。
 	3. **SEO 建议**：评论区、论坛等使用 `rel="ugc nofollow"`。
 
-# WP Mail SMTP
+## WP Mail SMTP
 
 WP Mail SMTP核心作用就是把 WordPress 默认的 PHP mail() 发信，改为真实的 SMTP/邮件服务商 API发信，让系统邮件（找回密码、订单通知、表单通知等）稳定送达收件箱，减少进垃圾箱/丢信。这其实还算挺重要的一个插件了。
 
-## 使用配置
+### 使用配置
 
 使用配置起来也挺简单的，首先在插件市场安装启用：
 
@@ -619,11 +619,11 @@ WP Mail SMTP支持许多邮箱。我准备使用国内常用的QQ邮箱。所以
 
 ![image-20250825170528957](https://image.hyly.net/i/2025/08/25/37223e8c521c45e32321e57f82056465-0.webp)
 
-# WP Revisions Control
+## WP Revisions Control
 
 WP Revisions Control 是一个让你控制 WordPress 文章、页面等内容的 修订版本（Revisions）数量的插件，避免数据库无限膨胀，提升网站性能和可维护性。因为wordpress默认是会保存无线修订版本的，所以这个插件限制了保存修订版本的个数，其实还蛮重要的。
 
-## 核心功能
+### 核心功能
 
 1. **限制修订版本数量**
 	1. 可以针对 **文章类型**（文章、页面、自定义文章类型）单独设置保留的修订版本数量。
@@ -634,7 +634,7 @@ WP Revisions Control 是一个让你控制 WordPress 文章、页面等内容的
 	1. 不修改已有修订，只在新修订保存时生效；
 	2. 界面简单，几乎“装了就能用”。
 
-## 安装使用
+### 安装使用
 
 在 WP 后台 → 插件 → 安装插件 → 搜索 WP Revisions Control → 安装并启用。
 
@@ -644,11 +644,11 @@ WP Revisions Control 是一个让你控制 WordPress 文章、页面等内容的
 
 ![image-20250825171119508](https://image.hyly.net/i/2025/08/25/a41c7a48f95769563393168150db9d2a-0.webp)
 
-# WP-Sweep
+## WP-Sweep
 
 WP-Sweep 是一个专门清理 WordPress 数据库的优化插件，它能帮你删除无用的数据（如修订版本、草稿、垃圾评论、孤立的元数据等），减少数据库体积，从而让网站运行更快、更轻量。
 
-## 核心功能
+### 核心功能
 
 1. **文章清理**
 	1. 删除多余的文章修订版本、自动草稿、已删除文章。
@@ -663,7 +663,7 @@ WP-Sweep 是一个专门清理 WordPress 数据库的优化插件，它能帮你
 6. **安全可靠**
 	1. 使用 **WordPress 内置函数** 进行删除操作（不像某些插件直接跑 SQL），安全性更高。
 
-## 使用配置
+### 使用配置
 
 在 WP 后台 → 插件 → 安装插件 → 搜索 WP Revisions Control → 安装并启用。
 
@@ -671,11 +671,11 @@ WP-Sweep 是一个专门清理 WordPress 数据库的优化插件，它能帮你
 
 ![image-20250825173148150](https://image.hyly.net/i/2025/08/25/65eafbf4a46081efec184da71b6b157b-0.webp)
 
-# Yoast SEO
+## Yoast SEO
 
 Yoast SEO能帮你在写文章和管理网站时，提供 搜索引擎优化（SEO）指导和工具，包括标题/描述设置、关键词分析、站点地图、面包屑导航等，提升你的网站在搜索引擎中的可见性和排名。
 
-##  核心功能
+###  核心功能
 
 1. **内容优化（On-page SEO）**
 	1. 每篇文章/页面都能设置 SEO 标题、Meta 描述、目标关键词。
@@ -693,13 +693,13 @@ Yoast SEO能帮你在写文章和管理网站时，提供 搜索引擎优化（S
 5. **扩展（Pro 版）**
 	1. 内链建议、重定向管理、多个关键词优化、无广告支持。
 
-## 使用配置
+### 使用配置
 
 **TIPS：**本节Yoast SEO配置大部分摘自《[Docker系列 WordPress系列 个人博客的SEO](https://blognas.hwb0307.com/linux/docker/858)》
 
 首先在 WP 后台 → 插件 → 安装插件 → 搜索 Yoast SEO → 安装并启用。
 
-### 初始化
+#### 初始化
 
 软件的初始界面就是这样的。从左侧栏进入。我们可以点`开始SEO数据优化`。
 
@@ -709,7 +709,7 @@ Yoast SEO能帮你在写文章和管理网站时，提供 搜索引擎优化（S
 
 ![img](https://image.hyly.net/i/2025/08/25/4eab992e31c6d350005d6adc9e052229-0.webp)
 
-### 站点管理
+#### 站点管理
 
 大家可以从`常规——站点管理员工具`这里进入设置。
 
@@ -717,7 +717,7 @@ Yoast SEO能帮你在写文章和管理网站时，提供 搜索引擎优化（S
 
 这里有4个搜索平台的设置。如果你博客的受众是国内用户，其实百度还是可以做一下的；如果你的网站受众是国外用户，那么Google等平台也可以做，均不太难。下面我演示一下这几个平台如何添加。
 
-#### 百度
+##### 百度
 
 按提示，进入`百度搜索资源平台`：
 
@@ -747,7 +747,7 @@ Yoast SEO能帮你在写文章和管理网站时，提供 搜索引擎优化（S
 
 ![img](https://image.hyly.net/i/2025/08/25/7d56e83a2b8a1d78c19bde16cd10bed8-0.webp)
 
-#### Google
+##### Google
 
 其实和百度的操作是类似的。或者说，在网站收录过程中，与搜索引擎的交互都是类似的。可能大家都是抄的Google的吧！
 
@@ -761,13 +761,13 @@ Yoast SEO能帮你在写文章和管理网站时，提供 搜索引擎优化（S
 
 最后还有Bing和Yandex，大家可以试一下！基本流程都是一样的
 
-### 搜索外观
+#### 搜索外观
 
 很多内容我也没怎么细改。估计不同类型的网站是不同的。我作为个人博客，只改了这个：
 
 ![img](https://image.hyly.net/i/2025/08/25/39a064c3a25cd4c11e366564215e2c7f-0.webp)
 
-### 工具
+#### 工具
 
 在`工具`中的`文件编辑器`希望小伙伴们可以多加关注。因为在这里我们可以编辑`robots.txt`和`.htaccess`文件。`robots.txt`对网络爬虫的行为进行了定义。
 
@@ -792,7 +792,7 @@ Sitemap: https://blognas.hwb0307.com/sitemap_index.xml
 
 此外，`.htaccess`文件一般是不需要做什么修改的，我也没有什么推荐。有兴趣的话，你可以看一下《[WordPress中.htaccess的使用技巧](https://www.cnblogs.com/yueke/p/3929062.html)》这个文章。如果你真的要改变它，最好对`.htaccess`做一下备份，如果搞砸了将旧文件替换掉问题文件即可满血复活。
 
-### 优化某篇文章
+#### 优化某篇文章
 
 一般**建议大家每写一篇文章就做一下该文章的SEO优化**。`Yoast SEO`在每篇文章里需要你写的东西不多，所以也浪费不了多少时间！另外，对于个人免费用户来说，我觉得SEO做好关键词、标题和元描述就差不多了。因为，关键词是告诉搜索引擎哪些用户搜索可能需要你这篇文章；用户搜索后，一般也只是瞄一眼标题和元描述，就决定要不要点进去了看了。所以要**抓住主要矛盾，好好写好标题和元描述**，不用太过在意特别细节的东西！
 
@@ -822,7 +822,7 @@ Sitemap: https://blognas.hwb0307.com/sitemap_index.xml
 
 另外，我偶然发现安装多语言支持插件（比如[插件 – GTranslate](https://hyly.net/categroy/article/code/wordpress/380#header-id-8)）会明显增加网站在bing等搜索引擎的曝光率。小伙伴们也可以试试看！
 
-# Broken Link Checker
+## Broken Link Checker
 
 它是 WordPress 的一个链接监测插件，作用是自动扫描并检测站点中的失效链接和图片。
 
@@ -865,6 +865,6 @@ Sitemap: https://blognas.hwb0307.com/sitemap_index.xml
 
 至此就是 Broken Link Checker全部的介绍了，还是一款非常好用的插件的。
 
-# 小结
+## 小结
 
 至此推荐Wordpress安装的插件就这么些了，在使用安装配置过程中有疑问的小伙伴可以在文章下方留言与我互动，有最新的资料我也会及时更新本文章，感兴趣的小伙伴请关注点赞哈~

@@ -5,7 +5,7 @@ postType: post
 status: publish
 ---
 
-# 前言
+## 前言
 
 之前我们有提到博客的工作流是本地用Typora编写markdown文件，然后通过m2w工具接口同步到wordpress里面去。而今天我们就来介绍下m2w工具的使用。
 
@@ -20,9 +20,9 @@ m2w我是根据[这个项目](https://github.com/huangwb8/m2w)魔改而来（基
 
 **所有的m2w版本均依赖xmlrcp.php**，所以你的WordPress站点不要关闭其API（默认开放）。在WordPress 6.0时代，配合Wordfence，其实不需要太担心安全问题。建议站点有https的情况下再使用m2w，否则可能会造成帐号/密码泄露（如果博客仅有http，建议上https；可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/353/#header-id-22)）。
 
-# 常规使用
+## 常规使用
 
-## application_password 获取
+### application_password 获取
 
 首先获取`application_password`：
 
@@ -38,7 +38,7 @@ m2w我是根据[这个项目](https://github.com/huangwb8/m2w)魔改而来（基
 
 ![img](https://image.hyly.net/i/2025/08/28/34a04329512a0c8278c2b8652527edbd-0.webp)
 
-## 软件下载
+### 软件下载
 
 在[Github](https://github.com/Markkkkkkkk/m2w)或[Gitee](https://gitee.com/markk/m2w)的发行版（Release）这里找到软件压缩包：
 
@@ -76,7 +76,7 @@ status: publish
 3. postType：发布类型。post为文章，shuoshuo为发布说说。
 4. status：文章状态。publish则运行m2w就会发布到wordpress上去，draft不会发布wordpress。（delete会删除wordpress上同名文章/说说，慎用，而且需要下文开启删除功能。）
 
-# 源码下载
+## 源码下载
 
 如果想看源码并再次进行魔改的小伙伴，可以直接下载源码进行自定义设置。推荐使用[Miniconda](https://gitee.com/link?target=https%3A%2F%2Fdocs.conda.io%2Fen%2Flatest%2Fminiconda.html)来管理Python版本和相关依赖，使用[Pycharm](https://www.jetbrains.com/pycharm/)工具进行代码修改，这是所需的依赖项：
 
@@ -99,6 +99,6 @@ install_requires=[
 
 > **注意：**如果小伙伴还需要发布说说等，还需要添加说说接口函数，详细可以看[这篇文章](https://www.hyly.net/categroy/article/code/wordpress/380#header-id-6)。
 
-# 小结
+## 小结
 
 m2w的配置使用不是太难，使用过程中如有疑问或觉得想增加什么大家都喜欢的功能，请小伙伴们在下方留言，会考虑加上呼声最高的功能噢~

@@ -5,7 +5,7 @@ postType: post
 status: publish
 ---
 
-# 前言
+## 前言
 
 用 Docker Compose 搭建 WordPress 博客的好处，可以总结为以下几个方面：
 
@@ -191,7 +191,7 @@ networks:
     driver: bridge
 ```
 
-# Wordpress构建
+## Wordpress构建
 
 docker容器我没有选官方镜像，而是统一选择了bitnami重新构建的镜像，有以下优点：
 
@@ -201,7 +201,7 @@ docker容器我没有选官方镜像，而是统一选择了bitnami重新构建�
 4. **可选 Helm chart/K8s 支持** → 如果未来要上 Kubernetes，Bitnami 的 WordPress chart 已经配套好了。
 5. **更适合新手或想省事的人** → 不用费力折腾各种依赖和配置。
 
-## docker 安装
+### docker 安装
 
 首先检查服务器是否安装了docker和docker compose，如果已经安装的小伙伴可以忽略此步骤。
 
@@ -250,7 +250,7 @@ docker-compose --version
 
 ```
 
-## 详细docker compose 文件
+### 详细docker compose 文件
 
 安装好docker compose 之后就可以开始构建了。如果只选择构建Wordpress，以下是核心配置：
 
@@ -391,7 +391,7 @@ docker load -i /usr/apps/images/ddsderek_easyimage2.8.6.tar
 
 如果看哪个容器启动失败了可以通过`docker logs 容器名（如wordpress）`查看容器日志，根据具体日志询问GPT如何修改即可。
 
-## Nginx配置
+### Nginx配置
 
 容器启动后，想要通过网站访问还需要进行nginx配置，新建`wordpress.conf`文件放到`/usr/apps/blog/nginx/conf/`目录下，详细配置如下：
 
@@ -468,11 +468,11 @@ docker load -i /usr/apps/images/ddsderek_easyimage2.8.6.tar
 
 至此，wordpress就全部安装好了，为了增强wordpress的功能大家可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/380)的插件推荐。想拥有一款漂亮的外观主题可以看这篇文章。
 
-# 第三方工具增强
+## 第三方工具增强
 
 如果大家只是构建wordpress博客网站，以上教程就可以了，想要功能增强的可以安装推荐的插件。这里还有一些通过非插件式增强wordpress的推荐工具。
 
-## Matomo网站访问监控构建
+### Matomo网站访问监控构建
 
 Matomo是一款开源可自建的网站流量数据统计分析工具，核心价值是全面统计+隐私可控。功能类似 Google Analytics，但数据完全由你自己掌控，避免隐私泄露。选择它就是因为它功能强大和数据完全是自己所有。
 
@@ -484,7 +484,7 @@ Matomo是一款开源可自建的网站流量数据统计分析工具，核心�
 4. 支持电商转化率、事件追踪、自定义指标
 5. 可与 WordPress、WooCommerce 等集成
 
-### compose 构建
+#### compose 构建
 
 首先进入mysql数据库容器创建matomo的数据库和对应的账号密码并授权，这样才能在启动容器的时候能正确的创建对应数据表。
 
@@ -530,7 +530,7 @@ matomo构建只需在compose文件中添加这段即可：
 
 然后`docker compose up -d`启动就可以。
 
-### Nginx配置
+#### Nginx配置
 
 容器启动后，想要通过网站访问还需要进行nginx配置，新建`matomo.conf`文件放到`/usr/apps/blog/nginx/conf/`目录下，详细配置如下：
 
@@ -577,7 +577,7 @@ matomo构建只需在compose文件中添加这段即可：
 
 弄完配置文件后重启下nginx容器`docker restart nginx`，然后域名`matomo.hyly.net`解析了服务器IP（域名如何解析IP看[这篇文章](https://hyly.net/categroy/article/code/wordpress/353#header-id-21)），就可以在浏览器里访问`https://matomo.你的域名`就可以访问matomo了。
 
-### 连接网站
+#### 连接网站
 
 首次登录需要初始化账号密码等信息，挨个填就行了，设置完之后进入后台会提示选择安装matomo的方式，这里选择Wordpress，然后选择插件连接：
 
@@ -646,13 +646,13 @@ matomo构建只需在compose文件中添加这段即可：
 - **如果你的网站流量中等或很大（每天几万 ~ 上百万 PV）、想用高级功能、多个站点共享统计 →**
 	 👉 建议 **独立 Matomo 容器 + Connect Matomo 插件**，更专业、更稳、更扩展性强。
 
-### 界面预览
+#### 界面预览
 
 在所有网站页面就可以看到已经连接成功的网站，然后网站页面访问数据就会在仪表盘中显示，可以查看自己网站的流量情况。
 
 ![image-20250826170731133](https://image.hyly.net/i/2025/08/26/280340beffff5e28d81ec84b942982df-0.webp)
 
-## UptimeKuma 网站可用性监控构建
+### UptimeKuma 网站可用性监控构建
 
 Uptime Kuma是一款开源免费自建的网站和服务在线状态监控平台，核心就是让你实时掌握自己网站、服务器、API 等服务是否可用并做到及时通知。
 
@@ -679,7 +679,7 @@ Uptime Kuma是一款开源免费自建的网站和服务在线状态监控平台
 	1. 完全开源，数据保存在自己的数据库里（SQLite / MySQL / MariaDB）
 	2. 部署方式灵活：Docker 一键运行，或者 Node.js 手动安装
 
-### compose 构建
+#### compose 构建
 
 UptimeKuma 构建只需在compose文件中添加这段即可：
 
@@ -699,7 +699,7 @@ UptimeKuma 构建只需在compose文件中添加这段即可：
 
 然后`docker compose up -d`启动就可以。
 
-### Nginx配置
+#### Nginx配置
 
 容器启动后，想要通过网站访问还需要进行nginx配置，新建`uptimeKuma.conf`文件放到`/usr/apps/blog/nginx/conf/`目录下，详细配置如下：
 
@@ -741,7 +741,7 @@ server {
 
 弄完配置文件后重启下nginx容器`docker restart nginx`，然后域名`kuma.hyly.net`解析了服务器IP（域名如何解析IP看[这篇文章](https://hyly.net/categroy/article/code/wordpress/353#header-id-21)），就可以在浏览器里访问`https://kuma.你的域名`就可以访问UptimeKuma了。
 
-### 界面预览
+#### 界面预览
 
 首次访问会进行初始化，初始化完毕之后在这里添加网站，这是我的详细配置，大家可以进行参考，其中要设置邮件通知SMTP，我是设置的QQ邮箱的，不懂怎么设置的小伙伴可以参考[这篇文章](https://hyly.net/categroy/article/code/wordpress/380#header-id-29)。
 
@@ -755,11 +755,11 @@ server {
 
 ![image-20250826173357519](https://image.hyly.net/i/2025/08/26/140824d2f7e5ee9a6dc0313eb16fd96e-0.webp)
 
-## Easyimage图床构建
+### Easyimage图床构建
 
 图床顾名思义就是给图片找个家（存储的位置），文字类直接上传wordpress无任何压力，但是图片一般都比较大，就需要有专门的地方去存储，这就是图床了。一般是使用Typora写markdown时把图片上传到图床然后把返回的图片链接粘贴到markdown文件中就可以正常显示图片了。关于到底是第三方图床或自建图床，或者自建图床都有哪些选择，请看下边详细对比：
 
-### 自建图床 vs 第三方图床
+#### 自建图床 vs 第三方图床
 
 <table><thead><tr><th>对比维度</th><th>自建图床</th><th>第三方图床</th></tr></thead><tbody><tr><td>控制权</td><td>完全自控，图片存储在自己服务器，可自由管理、迁移</td><td>受服务商控制，可能随时限制或删除</td></tr><tr><td>隐私安全</td><td>数据私有，安全性高</td><td>存在泄露风险，上传即外包给第三方</td></tr><tr><td>稳定性</td><td>依赖自身服务器和网络，需维护</td><td>稳定性通常较高，CDN加速，全球访问快</td></tr><tr><td>访问速度</td><td>取决于服务器带宽和地理位置</td><td>通常全球 CDN 加速，访问速度快</td></tr><tr><td>功能扩展</td><td>可自定义水印、压缩、访问控制、API等</td><td>功能受限，按服务商提供的功能</td></tr><tr><td>成本</td><td>需要服务器、存储、维护成本</td><td>免费或按流量/会员付费</td></tr><tr><td>易用性</td><td>需要自己部署和维护</td><td>即开即用，操作简单</td></tr></tbody></table>
 
@@ -768,13 +768,13 @@ server {
 - **小型个人站点、对隐私和可控性要求高** → 自建图床
 - **对速度、稳定性要求高、无需运维** → 第三方图床（如图怪兽、腾讯云 COS、SM.MS 等）
 
-### 自建图床对比
+#### 自建图床对比
 
 <table><thead><tr><th>图床</th><th>技术栈</th><th>主要特点</th><th>优点</th><th>缺点</th><th>适用场景</th></tr></thead><tbody><tr><td>Easyimage</td><td>Docker / PHP / MySQL</td><td>面向个人和小团队，提供后台管理和批量上传</td><td>部署简单、支持 Docker；后台管理方便；支持多用户</td><td>功能相对简单；对大规模访问不够优化</td><td>个人博客、团队小图床</td></tr><tr><td>lsky（兰空图床）</td><td>Go / SQLite/MySQL</td><td>高性能，支持七牛/OSS等外部存储</td><td>高性能，支持多种存储后端；支持短链接、Markdown 插件</td><td>部署稍复杂；文档相对少</td><td>博客、论坛、开发者使用，图片量中等</td></tr><tr><td>Chevereto 付费版</td><td>PHP / MySQL</td><td>类 Imgur 风格，可自建专业图床</td><td>界面漂亮、功能丰富（多用户、主题、标签、分类、API）</td><td>付费专业版功能更多；资源占用较大</td><td>专业图床、团队、社区网站</td></tr><tr><td>PicGo + 自建图床</td><td>Node.js / 多存储支持</td><td>客户端上传工具，支持多种云存储</td><td>支持多存储（七牛、阿里云、S3）；客户端上传方便</td><td>依赖第三方存储或自建服务；部署较复杂</td><td>博客写作、Markdown 插件配合使用</td></tr><tr><td>Chevereto Free</td><td>PHP / MySQL</td><td>免费版功能有限</td><td>可快速部署，界面简洁</td><td>免费版功能受限；无多用户管理</td><td>小型个人博客</td></tr></tbody></table>
 
 chevereto 免费版功能有限制，付费版则不考虑。lsky(兰空图床)自己搭建了一个使用起来不是那么顺畅，所以自己最后选择了Easyimages。免费、后台管理功能易懂强大，而且不需要数据库管理，很适合。
 
-### compose构建
+#### compose构建
 
 Easyimages 构建只需在compose文件中添加这段即可：
 
@@ -800,7 +800,7 @@ Easyimages 构建只需在compose文件中添加这段即可：
 
 然后`docker compose up -d`启动就可以。
 
-### Nginx配置
+#### Nginx配置
 
 ```
 # easyimage HTTP 自动跳转到 HTTPS
@@ -863,7 +863,7 @@ server {
 
 弄完配置文件后重启下nginx容器`docker restart nginx`，然后域名`image.hyly.net`解析了服务器IP（域名如何解析IP看[这篇文章](https://hyly.net/categroy/article/code/wordpress/353#header-id-21)），就可以在浏览器里访问`https://image.你的域名`就可以访问easyimage了。
 
-### 详细配置
+#### 详细配置
 
 首次访问会进行初始化，初始化完毕之后大家可以在设置里参考我的配置：
 
@@ -885,6 +885,6 @@ server {
 
 ![image-20250826184906428](https://image.hyly.net/i/2025/08/26/326a403a7a36c9dce6b3404a0e9da359-0.webp)
 
-# 小结
+## 小结
 
 至此Wordpress和协助使用的第三方工具就搭建完成了，有疑问的小伙伴可以在文章下方留言与我互动，有最新的资料我也会及时更新本文章，感兴趣的小伙伴请关注点赞哈~
