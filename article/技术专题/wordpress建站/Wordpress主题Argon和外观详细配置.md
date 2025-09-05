@@ -984,7 +984,7 @@ window.addEventListener('load', function() {
 
 #### 网站标题可爱字符
 
-主要参考[likepoems](https://likepoems.com/liuyan#comment-61)大佬的网站。类似效果为：
+类似效果为：
 
 ![chrome_mvq9V4FIPf](https://image.hyly.net/i/2025/09/02/96dbd7ab6508bd2db09896e686974663-0.gif)
 
@@ -1627,8 +1627,6 @@ html {
 该CSS代码对于任何WordPress主题都是适用的。
 
 #### 春节灯笼挂件
-
-> 参考《[WordPress 博客添加春节红灯笼挂件](https://wuzuhua.cn/3574.html)》
 
 效果大致如下：
 
