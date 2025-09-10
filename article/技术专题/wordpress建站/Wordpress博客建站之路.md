@@ -123,7 +123,7 @@ Wordpress的插件生态很强大，可以搭配各种各样的插件组合出�
 
 ### 外观设置类
 
-博主Wordpress使用的外观主题为[Argon](https://github.com/solstice23/argon-theme)，是一款很强大的主题，博主调研了很多其他的主题，目前来看都没有Argon美观以及功能强大，关于它如何使用可以看[这篇文章](https://www.hyly.net/categroy/article/code/wordpress/417/)，里面也包含关于博客外观类的其他设置，让博客变得更好看~
+博主Wordpress使用的外观主题为[Argon](https://github.com/solstice23/argon-theme)，是一款很强大的主题，博主调研了很多其他的主题，目前来看都没有Argon美观以及功能强大，关于它如何使用可以看[这篇文章]([Wordpress主题Argon和外观详细配置 - 梦呓](https://hyly.net/article/code/wordpress/465))，里面也包含关于博客外观类的其他设置，让博客变得更好看~
 
 ### 工具类
 
