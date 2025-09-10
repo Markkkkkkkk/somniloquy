@@ -40,7 +40,7 @@ services:
       - MYSQL_USER=shujukuzhanghao
       - MYSQL_PASSWORD=shujukumima
       - TZ=Asia/Shanghai
-    # 左边是服务器目录，右边是容器内目录，可以根据需要改动冒号左边目录，冒号右边目录不可更改。
+    #  左边是服务器目录，右边是容器内目录，可以根据需要改动冒号左边目录，冒号右边目录不可更改。
     volumes:
       - ./blog/mysqlData:/bitnami/mysql/data
     # 容器重启策略，只有手动停止才不重启，当发生错误或其他的时候才会重启。
