@@ -477,11 +477,11 @@ W3 Total Cache这个配置是跟Cloudflare连接，起到统一管理作用，�
 
 ## Wordfence Security
 
-这个已经在[服务器与博客网站安全](https://hyly.net/categroy/article/code/wordpress/353/#header-id-7)这篇文章里详细介绍过了，这里就不再赘述了。
+这个已经在[服务器与博客网站安全](https://hyly.net/article/code/wordpress/444/#header-id-7)这篇文章里详细介绍过了，这里就不再赘述了。
 
 ## WPS Hide Login
 
-这个已经在[服务器与博客网站安全](https://hyly.net/categroy/article/code/wordpress/353/#header-id-14)这篇文章里详细介绍过了，这里就不再赘述了。
+这个已经在[服务器与博客网站安全](https://hyly.net/article/code/wordpress/444/#header-id-14)这篇文章里详细介绍过了，这里就不再赘述了。
 
 ## WordPress Popular Posts
 

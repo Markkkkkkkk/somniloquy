@@ -89,7 +89,7 @@ JUST $28.99/YEAR - WOW!! (续费同价)
 
 SSH工具我使用并推荐的是[Xterminal](https://www.terminal.icu/)，自己也使用过诸如Finalshell、Xshell、MobaXterm、PuTTY类的SSH工具，但感觉都没有Xterminal好用，Xterminal有左侧清晰的文件树，可以像window一样方便的查找目录，不用再苦恼的手敲命令查看文件了。然后底部是命令行窗口也可以手敲命令，而且有命令智能提示，再也不用担心忘记命令是啥了，上部可以呈现文档内容，实现查看编辑。查看日志、配置文件非常方便。右侧有简单的服务器监控，可以方便查看服务器CPU、内存使用、上传下载速度、硬盘使用等。
 
-关于服务器安全，网上有很多方法比如使用非root账户登录并禁用root账户SSH登录、隐藏公网IP、安装UFW防火墙、更改默认SSH端口、禁ping等。这些我都没有使用，自己认为这些并不彻底并会对自己日常使用造成麻烦。自己选择的是SSH登录不使用密码而是密钥和Fail2ban防扫描和暴力破解这两个方法。详细可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/353/)如何设置。
+关于服务器安全，网上有很多方法比如使用非root账户登录并禁用root账户SSH登录、隐藏公网IP、安装UFW防火墙、更改默认SSH端口、禁ping等。这些我都没有使用，自己认为这些并不彻底并会对自己日常使用造成麻烦。自己选择的是SSH登录不使用密码而是密钥和Fail2ban防扫描和暴力破解这两个方法。详细可以看[这篇文章](https://hyly.net/article/code/wordpress/444)如何设置。
 
 ### 域名注册
 
@@ -111,7 +111,7 @@ SSH工具我使用并推荐的是[Xterminal](https://www.terminal.icu/)，自己
 	1. 没有像 GoDaddy 那样推销邮箱、建站、隐私保护等附加服务。
 	2. 域名隐私保护（WHOIS Privacy）**免费默认开启**。
 
-因为自己选择的是不备案的路线，所以选择了国外服务器，那么也就要选择国外域名厂商注册域名。在国外域名厂商中，Cloudflare是做的还算可以的，特别是免费CDN、安全防护很香！想了解详细使用的小伙伴可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/353#header-id-17)。
+因为自己选择的是不备案的路线，所以选择了国外服务器，那么也就要选择国外域名厂商注册域名。在国外域名厂商中，Cloudflare是做的还算可以的，特别是免费CDN、安全防护很香！想了解详细使用的小伙伴可以看[这篇文章](https://hyly.net/article/code/wordpress/444#header-id-17)。
 
 ### Wordpress搭建
 

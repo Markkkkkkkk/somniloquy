@@ -462,9 +462,9 @@ docker load -i /usr/apps/images/ddsderek_easyimage2.8.6.tar
 }
 ```
 
-因为自己启用了HTTPS安全访问，免费的，所以建议小伙伴们也使用HTTPS访问，详细的使用方法可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/353/#header-id-22)。
+因为自己启用了HTTPS安全访问，免费的，所以建议小伙伴们也使用HTTPS访问，详细的使用方法可以看[这篇文章](https://hyly.net/article/code/wordpress/444/#header-id-22)。
 
-弄完配置文件后重启下nginx容器`docker restart nginx`，然后域名`hyly.net`解析了服务器IP（域名如何解析IP看[这篇文章](https://hyly.net/categroy/article/code/wordpress/353#header-id-21)），就可以在浏览器里访问`https://你的域名`就可以访问Wordpress了。后台登陆地址为`https://你的域名/wp-admin`或`https://你的域名/wp-login.php`
+弄完配置文件后重启下nginx容器`docker restart nginx`，然后域名`hyly.net`解析了服务器IP（域名如何解析IP看[这篇文章](https://hyly.net/article/code/wordpress/444#header-id-21)），就可以在浏览器里访问`https://你的域名`就可以访问Wordpress了。后台登陆地址为`https://你的域名/wp-admin`或`https://你的域名/wp-login.php`
 
 至此，wordpress就全部安装好了，为了增强wordpress的功能大家可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/380)的插件推荐。想拥有一款漂亮的外观主题可以看这篇文章。
 
@@ -575,7 +575,7 @@ matomo构建只需在compose文件中添加这段即可：
 
 ```
 
-弄完配置文件后重启下nginx容器`docker restart nginx`，然后域名`matomo.hyly.net`解析了服务器IP（域名如何解析IP看[这篇文章](https://hyly.net/categroy/article/code/wordpress/353#header-id-21)），就可以在浏览器里访问`https://matomo.你的域名`就可以访问matomo了。
+弄完配置文件后重启下nginx容器`docker restart nginx`，然后域名`matomo.hyly.net`解析了服务器IP（域名如何解析IP看[这篇文章](https://hyly.net/article/code/wordpress/444#header-id-21)），就可以在浏览器里访问`https://matomo.你的域名`就可以访问matomo了。
 
 #### 连接网站
 
@@ -739,7 +739,7 @@ server {
 
 ```
 
-弄完配置文件后重启下nginx容器`docker restart nginx`，然后域名`kuma.hyly.net`解析了服务器IP（域名如何解析IP看[这篇文章](https://hyly.net/categroy/article/code/wordpress/353#header-id-21)），就可以在浏览器里访问`https://kuma.你的域名`就可以访问UptimeKuma了。
+弄完配置文件后重启下nginx容器`docker restart nginx`，然后域名`kuma.hyly.net`解析了服务器IP（域名如何解析IP看[这篇文章](https://hyly.net/article/code/wordpress/444#header-id-21)），就可以在浏览器里访问`https://kuma.你的域名`就可以访问UptimeKuma了。
 
 #### 界面预览
 
@@ -861,7 +861,7 @@ server {
 
 ```
 
-弄完配置文件后重启下nginx容器`docker restart nginx`，然后域名`image.hyly.net`解析了服务器IP（域名如何解析IP看[这篇文章](https://hyly.net/categroy/article/code/wordpress/353#header-id-21)），就可以在浏览器里访问`https://image.你的域名`就可以访问easyimage了。
+弄完配置文件后重启下nginx容器`docker restart nginx`，然后域名`image.hyly.net`解析了服务器IP（域名如何解析IP看[这篇文章](https://hyly.net/article/code/wordpress/444#header-id-21)），就可以在浏览器里访问`https://image.你的域名`就可以访问easyimage了。
 
 #### 详细配置
 
