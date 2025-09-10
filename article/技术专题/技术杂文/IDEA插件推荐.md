@@ -1,6 +1,6 @@
 ---
-category: [博客建站]
-tag: [wordpress, 建站]
+category: [技术杂文]
+tag: [window,电脑软件]
 postType: post
 status: draft
 ---
