@@ -652,7 +652,28 @@ button#fabtn_back_to_top, button#fabtn_go_to_comment, button#fabtn_toggle_blog_s
 	filter: url("data:image/svg+xml;utf8,#grayscale");
 	filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
 	-webkit-filter: grayscale(1);
-} */		
+} */
+/*只对正文文字缩进2字符，而不影响引用、标题、列表*/
+.post-content p {
+    text-indent: 2em;
+    //margin-top: 0.8em;   /* 段落之间留点间距 */
+    //line-height: 1.8;    /* 增加行距，可读性更好 */
+}
+.post-content blockquote p,
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6,
+.post-content h7,
+.post-content li {
+    text-indent: 0; /* 保证标题、引用、列表、图片不缩进 */
+}
+/* 取消只有图片的段落缩进 */
+.post-content p:has(img) {
+    text-indent: 0 !important;
+}
 </style>
 
 
@@ -1725,6 +1746,38 @@ remove_filter( 'the_title', 'capital_P_dangit', 11 );
 remove_filter( 'the_content', 'capital_P_dangit', 11 );
 remove_filter( 'comment_text', 'capital_P_dangit', 31 );
 ```
+
+#### 正文首行缩进
+
+默认情况下markdown是不会默认首行缩进的，除非在每个段落开头添加两个`&emsp;&emsp;`才能实现首行缩进两字符，但是每个段落都挨个添加太麻烦了，就可以在`/usr/apps/blog/wordpressData/wp-content/themes/argon/specialEffects/common.php`里面wordpress全局段落首行缩进的css样式：
+
+```
+/*只对正文文字缩进2字符，而不影响引用、标题、列表*/
+.post-content p {
+    text-indent: 2em;
+    //margin-top: 0.8em;   /* 段落之间留点间距 */
+    //line-height: 1.8;    /* 增加行距，可读性更好 */
+}
+.post-content blockquote p,
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6,
+.post-content h7,
+.post-content li {
+    text-indent: 0; /* 保证标题、引用、列表、图片不缩进 */
+}
+/* 取消只有图片的段落缩进 */
+.post-content p:has(img) {
+    text-indent: 0 !important;
+}
+```
+
+效果如下：
+
+![image-20250912113009222](https://image.hyly.net/i/2025/09/12/e05f686c94f7acd930cdf5d03814c4a0-0.webp)
 
 ## Wordpress页面配置
 
