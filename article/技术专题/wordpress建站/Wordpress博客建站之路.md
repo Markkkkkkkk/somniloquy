@@ -128,7 +128,7 @@ Wordpress的插件生态很强大，可以搭配各种各样的插件组合出�
 ### 工具类
 
 1. Typora：一款所见即所得的 Markdown 编辑器，支持实时预览和导出多种格式，常用于写笔记、文档或博客文章；详细使用可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/396/)。
-2. m2w：一款自动化博文发布工具，可以一键把本地写好的markdown文章发布到Wordpress上去。详细使用可以看[这篇文章](https://www.hyly.net/categroy/article/code/wordpress/399/)。
+2. m2w：一款自动化博文发布工具，可以一键把本地写好的markdown文章发布到Wordpress上去。详细使用可以看[这篇文章](https://www.hyly.net/article/code/wordpress/399/)。
 3. Rclone：是一个功能强大的 命令行云存储同步工具，可以在本地与各种网盘/对象存储之间进行同步、迁移、挂载和备份。详细使用可以看[这篇文章](https://www.hyly.net/categroy/article/code/wordpress/410/)。
 
 ## 小结

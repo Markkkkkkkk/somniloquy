@@ -18,7 +18,7 @@ m2w我是根据[这个项目](https://github.com/huangwb8/m2w)魔改而来（基
 
 魔改后的m2w在这里可以找到：[Github](https://github.com/Markkkkkkkk/m2w)，[Gitee](https://gitee.com/markk/m2w)；接下来我们介绍魔改后的m2w该如何使用。
 
-**所有的m2w版本均依赖xmlrcp.php**，所以你的WordPress站点不要关闭其API（默认开放）。在WordPress 6.0时代，配合Wordfence，其实不需要太担心安全问题。建议站点有https的情况下再使用m2w，否则可能会造成帐号/密码泄露（如果博客仅有http，建议上https；可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/353/#header-id-22)）。
+**所有的m2w版本均依赖xmlrcp.php**，所以你的WordPress站点不要关闭其API（默认开放）。在WordPress 6.0时代，配合Wordfence，其实不需要太担心安全问题。建议站点有https的情况下再使用m2w，否则可能会造成帐号/密码泄露（如果博客仅有http，建议上https；可以看[这篇文章](https://hyly.net/article/code/wordpress/444#header-id-23)）。
 
 ## 常规使用
 
