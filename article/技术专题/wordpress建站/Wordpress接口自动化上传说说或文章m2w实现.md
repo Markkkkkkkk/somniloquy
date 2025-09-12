@@ -97,7 +97,7 @@ install_requires=[
 
 ![image-20250828154659658](https://image.hyly.net/i/2025/08/28/e88cef122909357441384bfdd6cf26d0-0.webp)
 
-> **注意：**如果小伙伴还需要发布说说等，还需要添加说说接口函数，详细可以看[这篇文章](https://www.hyly.net/categroy/article/code/wordpress/380#header-id-6)。
+> **注意：**如果小伙伴还需要发布说说等，还需要添加说说接口函数，详细可以看[这篇文章](https://www.hyly.net/article/code/wordpress/380#header-id-6)。
 
 ## 小结
 

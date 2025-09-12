@@ -30,7 +30,7 @@ Rclone是一个强大的命令行工具，用于在本地与各类云存储（�
 
 ![image-20250829150704634](https://image.hyly.net/i/2025/08/29/526b73f184eb38eb971b23d14d317a38-0.webp)
 
-大家选适配自己电脑的下载就可以了，下载下来是一个压缩包，然后解压到一个目录即可。这里以`rclone-v1.70.3-windows-amd64`我安装的这个版本为示例，其他版本的估计也大差不差。进行Rclone配置之前，需要大家的服务器开启SSH密钥登录。不了解的小伙伴可以看[这篇文章](https://www.hyly.net/categroy/article/code/wordpress/353/)。以下是详细配置过程：
+大家选适配自己电脑的下载就可以了，下载下来是一个压缩包，然后解压到一个目录即可。这里以`rclone-v1.70.3-windows-amd64`我安装的这个版本为示例，其他版本的估计也大差不差。进行Rclone配置之前，需要大家的服务器开启SSH密钥登录。不了解的小伙伴可以看[这篇文章](https://hyly.net/article/code/wordpress/444)。以下是详细配置过程：
 
 ![image-20250829155232131](https://image.hyly.net/i/2025/08/29/03033c28c761fec9add89d264a590671-0.webp)
 

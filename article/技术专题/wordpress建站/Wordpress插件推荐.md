@@ -295,7 +295,7 @@ function get_shuoshuo_list_callback($request) {
 }
 ```
 
-添加这些就可以实现用m2w工具对说说的增删改查了，m2w具体如何使用看这篇文章。
+添加这些就可以实现用m2w工具对说说的增删改查了，m2w具体如何使用看[这篇文章](https://hyly.net/article/code/wordpress/399)。
 
 ## Easy Updates Manager
 
@@ -421,7 +421,7 @@ W3 Total Cache 是一个WordPress 缓存优化插件，用于提升网站加载�
 
 #### 数据库缓存高级设置
 
-数据库缓存是把数据库从磁盘中查出来的结果缓存到内存中，从而提高查询速度，能尽快的给用户返回结果，所以它提示数据库缓存尽量不要选择磁盘存储，要选择Redis或Memcached。但是W3 Total Cache插件跟Redis数据库配置不太友好，没有Memcached一样只需要填写容器名称加端口号就能链接了。详细Memcached的安装可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/378#header-id-2)。
+数据库缓存是把数据库从磁盘中查出来的结果缓存到内存中，从而提高查询速度，能尽快的给用户返回结果，所以它提示数据库缓存尽量不要选择磁盘存储，要选择Redis或Memcached。但是W3 Total Cache插件跟Redis数据库配置不太友好，没有Memcached一样只需要填写容器名称加端口号就能链接了。详细Memcached的安装可以看[这篇文章](https://hyly.net/article/code/wordpress/378#header-id-2)。
 
 ![image-20250822174548658](https://image.hyly.net/i/2025/08/22/13889f4dc7c41bf94c735cb08d586b1b-0.webp)
 
@@ -431,7 +431,7 @@ W3 Total Cache 是一个WordPress 缓存优化插件，用于提升网站加载�
 
 #### 对象缓存高级设置
 
-对象缓存主要是一些键值对什么的，跟数据库缓存配置差不多，也是选了Memcached作为内存缓存。详细的Memcached配置可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/378#header-id-2)。
+对象缓存主要是一些键值对什么的，跟数据库缓存配置差不多，也是选了Memcached作为内存缓存。详细的Memcached配置可以看[这篇文章](https://hyly.net/article/code/wordpress/378#header-id-2)。
 
 ![image-20250822175225545](https://image.hyly.net/i/2025/08/22/fc8d65849bfa55347aaf1b835100b2ba-0.webp)
 
@@ -820,7 +820,7 @@ Sitemap: https://blognas.hwb0307.com/sitemap_index.xml
 
 不过我个人认为，如果**你坚持做好内容，并且多在内容平台曝光**，看你文章的人多了，网站比重高，搜索引擎自然就会收录你的文章。刚刚开始的个人博客，我觉得设置好那些基本的SEO就行了。
 
-另外，我偶然发现安装多语言支持插件（比如[插件 – GTranslate](https://hyly.net/categroy/article/code/wordpress/380#header-id-8)）会明显增加网站在bing等搜索引擎的曝光率。小伙伴们也可以试试看！
+另外，我偶然发现安装多语言支持插件（比如[插件 – GTranslate](https://hyly.net/article/code/wordpress/380#header-id-8)）会明显增加网站在bing等搜索引擎的曝光率。小伙伴们也可以试试看！
 
 ## Broken Link Checker
 

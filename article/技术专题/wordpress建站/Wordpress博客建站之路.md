@@ -115,11 +115,11 @@ SSH工具我使用并推荐的是[Xterminal](https://www.terminal.icu/)，自己
 
 ### Wordpress搭建
 
-博客使用国外服务器采用docker compose 构建，方便迁移和维护，容器目录都在一块，而且都是一些配置类文件或重要文件才会映射出来，这样重要文件的总大小就尽可能小，也方便用rclone同步到本地window上去。一举多得。详细搭建过程可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/378)。
+博客使用国外服务器采用docker compose 构建，方便迁移和维护，容器目录都在一块，而且都是一些配置类文件或重要文件才会映射出来，这样重要文件的总大小就尽可能小，也方便用rclone同步到本地window上去。一举多得。详细搭建过程可以看[这篇文章](https://hyly.net/article/code/wordpress/378)。
 
 ### 功能插件类
 
-Wordpress的插件生态很强大，可以搭配各种各样的插件组合出吊炸天的功能。博主推荐使用的插件可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/380/)。
+Wordpress的插件生态很强大，可以搭配各种各样的插件组合出吊炸天的功能。博主推荐使用的插件可以看[这篇文章](https://hyly.net/article/code/wordpress/380/)。
 
 ### 外观设置类
 
@@ -127,9 +127,9 @@ Wordpress的插件生态很强大，可以搭配各种各样的插件组合出�
 
 ### 工具类
 
-1. Typora：一款所见即所得的 Markdown 编辑器，支持实时预览和导出多种格式，常用于写笔记、文档或博客文章；详细使用可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/396/)。
+1. Typora：一款所见即所得的 Markdown 编辑器，支持实时预览和导出多种格式，常用于写笔记、文档或博客文章；详细使用可以看[这篇文章](https://hyly.net/article/code/wordpress/396/)。
 2. m2w：一款自动化博文发布工具，可以一键把本地写好的markdown文章发布到Wordpress上去。详细使用可以看[这篇文章](https://www.hyly.net/article/code/wordpress/399/)。
-3. Rclone：是一个功能强大的 命令行云存储同步工具，可以在本地与各种网盘/对象存储之间进行同步、迁移、挂载和备份。详细使用可以看[这篇文章](https://www.hyly.net/categroy/article/code/wordpress/410/)。
+3. Rclone：是一个功能强大的 命令行云存储同步工具，可以在本地与各种网盘/对象存储之间进行同步、迁移、挂载和备份。详细使用可以看[这篇文章](https://www.hyly.net/article/code/wordpress/410/)。
 
 ## 小结
 

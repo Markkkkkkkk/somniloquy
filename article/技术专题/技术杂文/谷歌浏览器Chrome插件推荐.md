@@ -34,7 +34,7 @@ A作为一个电脑重度使用者兼程序员。使用最多的浏览器就是�
 安装之后页面右击就可以快速复制markdown格式的链接：
 
 ```
-[Wordpress全站备份工具Rclone - 梦呓](https://www.hyly.net/categroy/article/code/wordpress/410/)
+[Wordpress全站备份工具Rclone - 梦呓](https://www.hyly.net/article/code/wordpress/410/)
 ```
 
 ![image-20250903163639664](https://image.hyly.net/i/2025/09/03/53554b0d98a8b8a846fe31fba3f84109-0.webp)

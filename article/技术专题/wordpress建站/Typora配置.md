@@ -107,7 +107,7 @@ Typora默认的快捷键大多数都还好。自己目前只修改了一个快�
 
 ### 图床
 
-写markdown怎么能少得了图床呢，关于图床的搭建大家可以看[这篇文章](https://hyly.net/categroy/article/code/wordpress/378/#header-id-16)。
+写markdown怎么能少得了图床呢，关于图床的搭建大家可以看[这篇文章](https://hyly.net/article/code/wordpress/378/#header-id-16)。
 
 图床搭建完成之后就是该如何使用了。我的基本路线是：在typora里粘贴图片然后通过picList调用接口的方式就可以把图片上传到图床了。
 
