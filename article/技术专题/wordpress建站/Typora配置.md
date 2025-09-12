@@ -149,7 +149,7 @@ Windows系统：
 
 > 可以参考[markdown表情包](https://www.webfx.com/tools/emoji-cheat-sheet/)
 
-比如 🙂 、 ![:cold_sweat:](https://image.hyly.net/i/2025/08/27/8ee81c64f06686f77ae75749ffae9a3e-0.webp) 、 ![:thumbsup:](https://image.hyly.net/i/2025/08/27/315057f5b1ea81082b6c70fe9930f133-0.webp) 、 ![:sunny:](https://image.hyly.net/i/2025/08/27/0473e256a07e1a67619338863865fa7a-0.webp) ，挺有趣的！由于在使用Ajax的Argon主题时其显示并不正常（即表情显示为字符串)，因此我并不是很常用。大家可以试试看！
+比如😅🤣🥰😂挺有趣的！由于在使用Ajax的Argon主题时其显示并不正常（即表情显示为字符串)，因此我并不是很常用。大家可以试试看！
 
 或者大家也可以使用颜文字，这样限制就少了，我一般都是在博客评论区找现成的颜文字，或者大家也可以在第三方平台找一些粘贴到文章里表达自己的情绪。随便找个文章，就像这种：
 

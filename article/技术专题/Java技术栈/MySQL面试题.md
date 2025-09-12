@@ -626,6 +626,13 @@ EXPLAIN SELECT ...;
 
 会返回一张表，重点看以下字段：
 
+<figure class='table-figure'><table>
+<thead>
+<tr><th>字段</th><th>含义</th><th>关键点</th></tr></thead>
+<tbody><tr><td><strong>id</strong></td><td>查询执行顺序 ID</td><td>数字越大优先级越高；同 ID 表示同级；子查询会有不同 ID</td></tr><tr><td><strong>select_type</strong></td><td>查询类型</td><td>SIMPLE（简单查询），PRIMARY（主查询），SUBQUERY（子查询）</td></tr><tr><td><strong>table</strong></td><td>当前扫描的表</td><td>哪个表在被访问</td></tr><tr><td><strong>type</strong></td><td>连接类型（重要）</td><td><strong>性能由好到差</strong>：system &gt; const &gt; eq_ref &gt; ref &gt; range &gt; index &gt; ALL</td></tr><tr><td><strong>possible_keys</strong></td><td>可能用到的索引</td><td>MySQL 认为可用的索引</td></tr><tr><td><strong>key</strong></td><td>实际用到的索引</td><td>如果是 <code>NULL</code> 就没用到索引</td></tr><tr><td><strong>key_len</strong></td><td>使用的索引长度</td><td>越长表示利用的索引列越多</td></tr><tr><td><strong>rows</strong></td><td>预估扫描的行数</td><td>数字越小越好，rows 太大说明索引没用上</td></tr><tr><td><strong>filtered</strong></td><td>行过滤比例 (%)</td><td>表示剩下的行占比，低说明过滤多</td></tr><tr><td><strong>Extra</strong></td><td>额外信息</td><td>包含很多优化线索（见下表）</td></tr></tbody>
+</table></figure>
+
+
 | 字段              | 含义             | 关键点                                                       |
 | ----------------- | ---------------- | ------------------------------------------------------------ |
 | **id**            | 查询执行顺序 ID  | 数字越大优先级越高；同 ID 表示同级；子查询会有不同 ID        |
