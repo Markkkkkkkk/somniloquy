@@ -267,7 +267,7 @@ MySQL是只支持一种Join算法Nested-Loop Join(嵌套循环连接)，并不�
 
 ### Block Nested-Loop Join
 
-![img](MySQL面试题.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIyOTk2MjAx,size_16,color_FFFFFF,t_70-16473453575558.png)
+![](https://image.hyly.net/i/2025/09/16/fc056a6b33b466e3f61bb4033c6cf6e9-0.webp)
 
 在有索引的情况下，MySQL会尝试去使用Index Nested-Loop Join算法，在有些情况下，可能Join的列就是没有索引，那么这时MySQL的选择绝对不会是最先介绍的Simple Nested-Loop Join算法，而是会优先使用Block Nested-Loop Join的算法。
 
@@ -631,58 +631,28 @@ EXPLAIN SELECT ...;
 <tr><th>字段</th><th>含义</th><th>关键点</th></tr></thead>
 <tbody><tr><td><strong>id</strong></td><td>查询执行顺序 ID</td><td>数字越大优先级越高；同 ID 表示同级；子查询会有不同 ID</td></tr><tr><td><strong>select_type</strong></td><td>查询类型</td><td>SIMPLE（简单查询），PRIMARY（主查询），SUBQUERY（子查询）</td></tr><tr><td><strong>table</strong></td><td>当前扫描的表</td><td>哪个表在被访问</td></tr><tr><td><strong>type</strong></td><td>连接类型（重要）</td><td><strong>性能由好到差</strong>：system &gt; const &gt; eq_ref &gt; ref &gt; range &gt; index &gt; ALL</td></tr><tr><td><strong>possible_keys</strong></td><td>可能用到的索引</td><td>MySQL 认为可用的索引</td></tr><tr><td><strong>key</strong></td><td>实际用到的索引</td><td>如果是 <code>NULL</code> 就没用到索引</td></tr><tr><td><strong>key_len</strong></td><td>使用的索引长度</td><td>越长表示利用的索引列越多</td></tr><tr><td><strong>rows</strong></td><td>预估扫描的行数</td><td>数字越小越好，rows 太大说明索引没用上</td></tr><tr><td><strong>filtered</strong></td><td>行过滤比例 (%)</td><td>表示剩下的行占比，低说明过滤多</td></tr><tr><td><strong>Extra</strong></td><td>额外信息</td><td>包含很多优化线索（见下表）</td></tr></tbody>
 </table></figure>
+#### `Extra` 常见值及含义
 
+1. **Using index**：覆盖索引，性能好（不用回表）。
+2. **Using where**：条件过滤了行。
+3. **Using filesort**：需要额外排序（可能性能差）。
+4. **Using temporary**：用到临时表（通常 GROUP BY / ORDER BY 导致）。
+5. **Range checked for each record**：没有用好索引，MySQL 每条记录都要做索引检查。
 
-| 字段              | 含义             | 关键点                                                       |
-| ----------------- | ---------------- | ------------------------------------------------------------ |
-| **id**            | 查询执行顺序 ID  | 数字越大优先级越高；同 ID 表示同级；子查询会有不同 ID        |
-| **select_type**   | 查询类型         | SIMPLE（简单查询），PRIMARY（主查询），SUBQUERY（子查询）    |
-| **table**         | 当前扫描的表     | 哪个表在被访问                                               |
-| **type**          | 连接类型（重要） | **性能由好到差**：system > const > eq_ref > ref > range > index > ALL |
-| **possible_keys** | 可能用到的索引   | MySQL 认为可用的索引                                         |
-| **key**           | 实际用到的索引   | 如果是 `NULL` 就没用到索引                                   |
-| **key_len**       | 使用的索引长度   | 越长表示利用的索引列越多                                     |
-| **rows**          | 预估扫描的行数   | 数字越小越好，rows 太大说明索引没用上                        |
-| **filtered**      | 行过滤比例 (%)   | 表示剩下的行占比，低说明过滤多                               |
-| **Extra**         | 额外信息         | 包含很多优化线索（见下表）                                   |
-
-------
-
-## 三、`Extra` 常见值及含义
-
-- **Using index**：覆盖索引，性能好（不用回表）。
-- **Using where**：条件过滤了行。
-- **Using filesort**：需要额外排序（可能性能差）。
-- **Using temporary**：用到临时表（通常 GROUP BY / ORDER BY 导致）。
-- **Range checked for each record**：没有用好索引，MySQL 每条记录都要做索引检查。
-
-------
-
-## 四、优化时关注的关键点
+### 优化时关注的关键点
 
 1. **type 列**
-	- 理想值：`const` / `eq_ref` / `ref` / `range`
-	- 不好：`index`（全索引扫描），`ALL`（全表扫描）
+	1. 理想值：`const` / `eq_ref` / `ref` / `range`
+	2. 不好：`index`（全索引扫描），`ALL`（全表扫描）
 2. **rows**
-	- 预估扫描行数，越少越好。
-	- 如果 `rows=1000000`，说明索引没生效。
+	1. 预估扫描行数，越少越好。
+	2. 如果 `rows=1000000`，说明索引没生效。
 3. **key**
-	- 如果是 `NULL`，说明没用上索引。
+	1. 如果是 `NULL`，说明没用上索引。
 4. **Extra**
-	- 出现 `Using filesort`、`Using temporary` → 要考虑加索引、优化 SQL。
+	1. 出现 `Using filesort`、`Using temporary` → 要考虑加索引、优化 SQL。
 
-------
-
-## 五、优化流程（口诀）
-
-1. **EXPLAIN 一看 type** → 是否走索引
-2. **rows 多少心里有数** → 是否大扫描
-3. **key 是不是 NULL** → 索引用没用
-4. **Extra 有无 filesort/temp** → 是否需要调整
-
-------
-
-✅ 举个例子：
+**举个例子：**
 
 ```
 EXPLAIN SELECT * FROM orders WHERE customer_id=123 ORDER BY create_time DESC;
@@ -690,69 +660,114 @@ EXPLAIN SELECT * FROM orders WHERE customer_id=123 ORDER BY create_time DESC;
 
 可能结果：
 
+<figure class='table-figure'><table>
+<thead>
+<tr><th>id</th><th>select_type</th><th>table</th><th>type</th><th>key</th><th>rows</th><th>Extra</th></tr></thead>
+<tbody><tr><td>1</td><td>SIMPLE</td><td>orders</td><td>ref</td><td>idx_custid</td><td>1000</td><td>Using filesort</td></tr></tbody>
+</table></figure>
+
 | id   | select_type | table  | type | key        | rows | Extra          |
 | ---- | ----------- | ------ | ---- | ---------- | ---- | -------------- |
 | 1    | SIMPLE      | orders | ref  | idx_custid | 1000 | Using filesort |
 
-👉 分析：
+分析：
 
 - type=ref（OK，用了索引）
 - rows=1000（还好）
 - Extra=Using filesort（说明 create_time 没在索引里）
 
-👉 优化：建联合索引 `(customer_id, create_time)`，避免 filesort。
+优化：建联合索引 `(customer_id, create_time)`，避免 filesort。
 
-# 13、MySQL为什么选择B+树作为它的存储结构，为什么不选择Hash、二叉、红黑树？
+## 描述一下mysql的乐观锁和悲观锁，锁的种类？
 
-​		参考问题5
+### 悲观锁（Pessimistic Lock）
 
-# 14、描述一下mysql的乐观锁和悲观锁，锁的种类？
+**概念**：
 
-​		乐观锁并不是数据库自带的，如果需要使用乐观锁，那么需要自己去实现，一般情况下，我们会在表中新增一个version字段，每次更新数据version+1,在进行提交之前会判断version是否一致。
+1. 悲观锁假设 **每次操作数据都会发生冲突**，所以对数据操作前 **先加锁**，保证其他事务不能修改。
+2. 常见于高并发、写多读少的场景。
 
-​		mysql中的绝大部分锁都是悲观锁，按照粒度可以分为行锁和表锁：
+**MySQL 实现方式**：
 
-​		**行锁：**
+<figure class='table-figure'><table>
+<thead>
+<tr><th>类型</th><th>SQL 示例</th><th>说明</th></tr></thead>
+<tbody><tr><td><strong>行锁（共享/排他）</strong></td><td><code>SELECT * FROM user WHERE id=1 FOR UPDATE;</code></td><td>对查询到的行加排他锁（X Lock），其他事务不能修改。</td></tr><tr><td><strong>共享锁</strong></td><td><code>SELECT * FROM user WHERE id=1 LOCK IN SHARE MODE;</code></td><td>读锁，允许其他事务读，但不允许修改。</td></tr></tbody>
+</table></figure>
 
-​			共享锁：当读取一行记录的时候，为了防止别人修改，则需要添加S锁
+**特点**：
 
-​			排它锁：当修改一行记录的时候，为了防止别人同时进行修改，则需要添加X锁
+- 会阻塞其他事务，保证数据一致性。
+- 常用 **InnoDB** 引擎支持行锁和表锁。
+- 开销大，可能造成死锁。
 
-|      |   X    |   S    |
-| :--: | :----: | :----: |
-|  X   | 不兼容 | 不兼容 |
-|  S   | 不兼容 |  兼容  |
+### 乐观锁（Optimistic Lock）
 
-​			记录锁：添加在行索引上的锁
+**概念**：
 
-​			间隙锁：锁定范围是索引记录之间的间隙，针对可重复读以上隔离级别
+1. 乐观锁假设 **数据冲突很少发生**，不加锁，而是在提交更新时检查数据是否被修改。
+2. 常见于写少读多的场景。
 
-​			临键锁：记录锁+间隙锁
+**实现方式**：
 
-​		**表锁：**
+1. **版本号（Version）机制**
 
-​			意向锁：在获取某行的锁之前，必须要获取表的锁，分为意向共享锁，意向排它锁
+	```
+	-- 假设表有 version 字段
+	UPDATE user
+	SET balance = balance - 100, version = version + 1
+	WHERE id = 1 AND version = 3;
+	```
 
-​			自增锁：对自增字段所采用的特殊表级锁
+	1. 如果 `version=3`，说明数据未被其他事务修改，可以成功更新
+	2. 如果 version 不匹配 → 更新失败，需要重试
 
-​		锁模式的含义：
+2. **时间戳机制**
 
-​			IX：意向排它锁
+	1. 通过记录每条记录的 `last_update_time`，更新时检查是否被修改
+	2. 与版本号类似
 
-​			X：锁定记录本身和记录之前的间隙
+**特点**：
 
-​			S：锁定记录本身和记录之前的间隙
+1. 不加锁，性能好，适合高并发
+2. 不能防止脏读，但可防止更新丢失
+3. 常用于 **Web 应用缓存 + 数据库更新**
 
-​			X,REC_NOT_GAP：只锁定记录本身
+### MySQL 锁的种类
 
-​			S，REC_NOT_GAP：只锁定记录本身
+#### 按粒度分类
 
-​			X，GAP：间隙锁，不锁定记录本身
+<figure class='table-figure'><table>
+<thead>
+<tr><th>锁类型</th><th>粒度</th><th>说明</th></tr></thead>
+<tbody><tr><td><strong>表锁（Table Lock）</strong></td><td>表</td><td>整张表加锁，操作简单，但并发低</td></tr><tr><td><strong>行锁（Row Lock）</strong></td><td>行</td><td>最小粒度，InnoDB 支持，可提高并发</td></tr><tr><td><strong>页锁（Page Lock）</strong></td><td>页</td><td>MyISAM 支持，将一页记录加锁，介于表锁和行锁之间</td></tr></tbody>
+</table></figure>
 
-​			S，GAP：间隙锁，不锁定记录本身
+#### 按操作分类
 
-​			X，GAP,INSERT_INTENTION：插入意向锁
+<figure class='table-figure'><table>
+<thead>
+<tr><th>锁类型</th><th>说明</th></tr></thead>
+<tbody><tr><td><strong>共享锁（S Lock / 读锁）</strong></td><td>多事务可以同时读取，但不能修改</td></tr><tr><td><strong>排他锁（X Lock / 写锁）</strong></td><td>事务独占数据，其他事务不能读或写</td></tr><tr><td><strong>意向锁（IS/IX）</strong></td><td>InnoDB 用于行锁前，先在表上加意向锁，方便判断冲突</td></tr><tr><td><strong>自增锁（AUTO-INC Lock）</strong></td><td>仅对自增列，保证插入操作不冲突</td></tr></tbody>
+</table></figure>
 
-# 15、mysql原子性和持久性是怎么保证的？
+#### InnoDB 锁机制特点
 
-​		原子性通过undolog来实现，持久性通过redo log来实现
+1. **行锁优先**，支持 **记录锁 + 间隙锁 + 临键锁**
+2. **间隙锁（Gap Lock）**：间隙锁是加在 两条记录之间的空隙上的锁，锁住的是范围，而不是具体行。防止幻读。
+3. **临键锁（Next-Key Lock）** = 记录锁 + 间隙锁，锁定范围内的 现有记录 + 记录之间的间隙。
+
+#### 总结对比
+
+<figure class='table-figure'><table>
+<thead>
+<tr><th>特性</th><th>悲观锁</th><th>乐观锁</th></tr></thead>
+<tbody><tr><td>假设</td><td>数据冲突频繁</td><td>数据冲突少</td></tr><tr><td>加锁方式</td><td>先加锁</td><td>提交时检查</td></tr><tr><td>性能</td><td>开销大</td><td>高并发友好</td></tr><tr><td>常用场景</td><td>写多、高并发事务</td><td>读多、更新少</td></tr><tr><td>MySQL 实现</td><td><code>SELECT ... FOR UPDATE / LOCK IN SHARE MODE</code></td><td>版本号、时间戳</td></tr></tbody>
+</table></figure>
+
+## mysql原子性和持久性是怎么保证的？
+
+原子性通过undolog来实现，持久性通过redo log来实现，详细可以看[MVCC多版本并发控制](#MVCC多版本并发控制)
+
+
+

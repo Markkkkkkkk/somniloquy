@@ -12,7 +12,9 @@ status: publish
 以下这些资料是我根据上面这个视频再加上平时遇到觉得重要的总结的 ：
 
 1. Mysql面试题
-2. 
+2. Redis面试题
+3. ElasticSearch面试题
+4. Redis
 
 ## MySQL
 

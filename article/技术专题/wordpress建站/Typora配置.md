@@ -197,8 +197,6 @@ Markdown对HTML的兼容性不错。 字体、图片、表格、视频等，自�
 
 我们可以在[Markdown 表格 转换为 HTML 表格 – 在线表格转换工具](https://tableconvert.com/zh-cn/markdown-to-html)中对表格进行各种格式的转换，建议转换为压缩HTML：
 
-![msedge_nxy7oRzvfT](https://image.hyly.net/i/2025/08/27/a94b1f6dd812a6f315eb94e33b67d4e6-0.webp)
-
 ![msedge_nxy7oRzvfT](https://image.hyly.net/i/2025/08/27/4a6f3f65766efa656cf5e657a13c1088-0.webp)
 
 一般地，我们还需要使用CSS定义表格样式。比如，在本例中，我使用了`style="border:1px solid black; margin-left:auto; margin-right:auto;"`，其定义了边宽和表格居中。
@@ -206,6 +204,10 @@ Markdown对HTML的兼容性不错。 字体、图片、表格、视频等，自�
 经过转换，表格格式就正常了：
 
 ![image-20250827122432098](https://image.hyly.net/i/2025/08/27/725b3a86571fb60f6d765397caaf4d80-0.webp)
+
+如果遇到之前已经有markdown文件创建了表格而且表格很多的情况下，这样一个个转换比较麻烦，还有一种方法就是直接全选之前的markdown表格，复制为HTML格式，然后`Ctrl+Shift+V`无格式粘贴就可以了，不能`Ctrl+V`直接粘贴，这样是不行的：
+
+![PixPin_2025-09-13_21-05-38](https://image.hyly.net/i/2025/09/13/2cfea9bb47d88f13f9e3bb63c2f4ce98-0.webp)
 
 #### 视频
 
