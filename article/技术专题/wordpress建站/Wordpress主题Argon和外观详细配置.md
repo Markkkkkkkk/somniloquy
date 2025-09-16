@@ -786,7 +786,7 @@ button#fabtn_back_to_top, button#fabtn_go_to_comment, button#fabtn_toggle_blog_s
 
 #### 卡片3D特效
 
-> 来自中秋明月的[个人博客](https://iphoto.store/)。源项目地址：[vanilla-tilt.js](https://github.com/micku7zu/vanilla-tilt.js)
+> 来自中秋明月的个人博客。源项目地址：[vanilla-tilt.js](https://github.com/micku7zu/vanilla-tilt.js)
 
 卡片的3D特效如下图：
 
@@ -1891,7 +1891,7 @@ remove_filter( 'comment_text', 'capital_P_dangit', 31 );
 
 更多的参数设置可以看argon文档的[友链参数](https://argon-docs.solstice23.top/#/shortcode/friendlinks?id=参数)。
 
-最后，还有一种[旧短代码](https://argon-docs-old.solstice23.top/shortcode/friendlinks-old)的使用方式，大家也可以试试看：
+最后，还有一种旧短代码的使用方式，大家也可以试试看：
 
 ```
 [sfriendlinks] link|https://www.ruanyifeng.com/blog/|阮一峰|阮一峰的网络日志|https://www.ruanyifeng.com/blog/images/person2_s.jpg [/sfriendlinks]
