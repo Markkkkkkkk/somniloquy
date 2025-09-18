@@ -462,7 +462,7 @@ ACF 支持功能有助于 Rank Math SEO 能够读取并分析通过高级自定�
 
 它的作用WordPress 正文（the_content）里的文字 Rank Math 能自动读取并分析（关键词密度、可读性、链接数量等）。但如果你的网站或主题使用 ACF 插件（Advanced Custom Fields）把主要内容放在自定义字段里（比如产品描述、特色介绍、FAQ 等），默认 Rank Math 是读不到这些内容的。开启 ACF Support 之后，Rank Math 就会把 ACF 字段里的文字也纳入 SEO 分析。因为我没有安装相关插件，所以就没开启。
 
-#### AMP
+#### AMP工具
 
 安装 AMP 插件以使 Rank Math 能与加速移动页面协同工作。Rank Math 会自动在所有 AMP 页面中添加所需的元标签。
 
@@ -480,7 +480,7 @@ ACF 支持功能有助于 Rank Math SEO 能够读取并分析通过高级自定�
 1. 如果你使用了 AMP 插件（例如官方的 AMP 插件），并且网站有 AMP 版本页面，那么启用 AMP 支持是非常有帮助的，它可以确保你的网站 AMP 页面也能正确应用 Rank Math 的 SEO 优化规则。
 2. 如果你没有使用 AMP 或者不打算为移动端启用 AMP 格式，则无需开启此选项。
 
-这里我们开启了**Rank Math SEO的AMP**，如果想知道AMP插件如何安装使用的小伙伴可以看[这里](#AMP-1)。
+这里我们开启了**Rank Math SEO的AMP**，如果想知道AMP插件如何安装使用的小伙伴可以看[这里](#AMP)。
 
 #### Analytics
 
