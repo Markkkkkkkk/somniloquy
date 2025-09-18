@@ -1779,6 +1779,50 @@ remove_filter( 'comment_text', 'capital_P_dangit', 31 );
 
 ![image-20250912113009222](https://image.hyly.net/i/2025/09/12/e05f686c94f7acd930cdf5d03814c4a0-0.webp)
 
+#### 文章置顶
+
+文章置顶还是很有必要的，当我们文章比较多的时候，会有几篇是核心概括本分类主旨的基石（SEO的概念）文章，而且基石文章大多数指向了本分类其它的具体文章，所以为了用户来到我们网站能直接看到当前条件下最重要的几篇文章，快速了解核心观点，也能增加用户的留存率，我们采用了文章置顶。
+
+Wordpress默认的文章置顶在多个文章都同时置顶的情况下顺序是不好控制的，而且只能首页置顶，想在分类页、搜索结果页列表上方优先展示置顶文章是不行的，接下来就需要我们进行一些改造。首先在`functions.php`文件最下方添加代码：
+
+```
+# 添加首页、分类页、搜索结果页文章置顶
+function sticky_posts_everywhere( $query ) {
+    if ( ! is_admin() && $query->is_main_query() ) {
+        if ( is_home() || is_category() || is_tag() || is_search() ) {
+            $query->set( 'ignore_sticky_posts', 1 ); // 忽略默认置顶逻辑
+            add_filter( 'posts_orderby', 'sticky_posts_orderby', 10, 2 );
+        }
+    }
+}
+add_action( 'pre_get_posts', 'sticky_posts_everywhere' );
+
+function sticky_posts_orderby( $orderby, $query ) {
+    $sticky = get_option( 'sticky_posts' );
+    if ( ! empty( $sticky ) ) {
+        global $wpdb;
+        // 在SQL里让置顶文章排在前面
+        $sticky_ids = implode( ',', array_map( 'absint', $sticky ) );
+        $orderby = "FIELD({$wpdb->posts}.ID, {$sticky_ids}) DESC, {$wpdb->posts}.post_date DESC";
+    }
+    // 移除过滤器，避免影响其他查询
+    remove_filter( 'posts_orderby', 'sticky_posts_orderby', 10, 2 );
+    return $orderby;
+}
+```
+
+其次在**文章列表**先把想要置顶的文章点击**快速编辑**把文章的发布时间按照想要排第一个放在下边排好序，像这样：
+
+![image-20250917185508405](https://image.hyly.net/i/2025/09/17/9fefd088fee632cbcaf8b081d581315f-0.webp)
+
+其次然后从标号`6，5，4，3，2，1`这样开始进行置顶，注意一定是要这个顺序，然后再首页、分类页、搜索结果页就是自己期望的排序了。未置顶的文章、说说按照默认发布时间排序：
+
+![image-20250917185945684](https://image.hyly.net/i/2025/09/17/7c7b7fd201d9132b4c6354bbfa7ea09a-0.webp)
+
+![image-20250917190241074](https://image.hyly.net/i/2025/09/17/2d2ead1c7d2b848d398a13fc2bf2d891-0.webp)
+
+如果想中间插入一篇文章、修改排序、排序错乱重新恢复只需要把发布时间按照上面规则排列好然后重新按照`6、5、4、3、2、1`这样重新进行置顶就可以了。
+
 ## Wordpress页面配置
 
 新近成立的个人博客通常还会有一些特殊页面，比如`关于我`、`留言板`、`说说`、`友情链接`、`归档`、`隐私政策`等。它会让你的博客布局更加丰满、更加成熟一些。它们均可以通过`页面`来进行配置。
