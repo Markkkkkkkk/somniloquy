@@ -1,6 +1,6 @@
 ---
 category: [Java技术栈]
-tag: [java,mysql,八股文,mysql,redis,kafka,jvm,zookeeper,elasticsearch,kubernetes,apollo,skywallking,shardingsphere,ansible,shell,pulsar]
+tag: [java,mysql,八股文,面试,mysql,redis,kafka,jvm,zookeeper,elasticsearch,kubernetes,apollo,skywallking,shardingsphere,ansible,shell,pulsar]
 postType: post
 status: publish
 ---

@@ -5,6 +5,226 @@ postType: post
 status: publish
 ---
 
+## Redis常见面试题
+
+### 使用场景
+
+![image-20250923155010969](https://image.hyly.net/i/2025/09/23/f08845e84e1ab978106e38f55368d367-0.webp)
+
+![image-20250923155028442](https://image.hyly.net/i/2025/09/23/4d837e378bfd14faafd3d001a4f2c9dd-0.webp)
+
+### 如果发生了缓存穿透、击穿、雪崩，该如何解决？
+
+#### 缓存穿透
+
+![image-20250923155147329](https://image.hyly.net/i/2025/09/23/889829fc4f089eac5127851e52f91055-0.webp)
+
+![image-20250923155306745](https://image.hyly.net/i/2025/09/23/2de88d173a0e9cbddfb93ab70010137b-0.webp)
+
+![image-20250923155318291](https://image.hyly.net/i/2025/09/23/da5a413901594dec1758c3b2fbe6df42-0.webp)
+
+![image-20250923155343652](https://image.hyly.net/i/2025/09/23/b4afa856642f759325676e26ccf479e1-0.webp)
+
+![image-20250923155418235](https://image.hyly.net/i/2025/09/23/59cea48139a8f0139c64d3a4a4d4d021-0.webp)
+
+![image-20250923155403552](https://image.hyly.net/i/2025/09/23/b89616c3a01a963b09a6b09001661ebc-0.webp)
+
+![image-20250923155451167](https://image.hyly.net/i/2025/09/23/c5a8eb1cf738aa3ec2f8a907530eb198-0.webp)
+
+##### 面试话术
+
+![image-20250923155528141](https://image.hyly.net/i/2025/09/23/5f54e1cc7faef085869a3192afe20ddb-0.webp)
+
+#### 缓存击穿
+
+![image-20250923155618680](https://image.hyly.net/i/2025/09/23/5b370d83ebaee63410fc06234a686661-0.webp)![image-20250923155726012](https://image.hyly.net/i/2025/09/23/eaacb1a3e6e01b265c4063aec1137bd1-0.webp)
+
+##### 面试话术
+
+![image-20250923155800920](https://image.hyly.net/i/2025/09/23/f49f3f9339e430c6acddd33b8d099b2a-0.webp)
+
+#### 缓存雪崩
+
+![image-20250923155840242](https://image.hyly.net/i/2025/09/23/de6d4e416034cac19750c61963c45441-0.webp)
+
+![image-20250923155851158](https://image.hyly.net/i/2025/09/23/914bac33e0fa8c438a1fe196f3cea078-0.webp)
+
+![image-20250923155911661](https://image.hyly.net/i/2025/09/23/c4b5e760eff059431f710aa2d4e40690-0.webp)
+
+### 缓存一致性
+
+![image-20250923160339909](https://image.hyly.net/i/2025/09/23/a20f29ed3dd571e810ee44245fb845f3-0.webp)
+
+![image-20250923160501486](https://image.hyly.net/i/2025/09/23/50787e39ae756ad09cb563548c73ed61-0.webp)
+
+![image-20250923160514168](https://image.hyly.net/i/2025/09/23/d871b7d0922c3b0b24bb9076f19b0bee-0.webp)
+
+先操作库再删除缓存，或者做到延迟双删就可以。更新数据库 → 删除缓存 → 等待一段时间 → 再删一次缓存。
+
+![image-20250923160725651](https://image.hyly.net/i/2025/09/23/2fa3a97bddfc3ab79abba616dce53a1a-0.webp)
+
+![image-20250923160751093](https://image.hyly.net/i/2025/09/23/8ef18b12ae976ff0e567c97272eb6260-0.webp)
+
+![image-20250923160756268](https://image.hyly.net/i/2025/09/23/36184836e1f9f1b01a720d93472f792a-0.webp)
+
+![image-20250923160822939](https://image.hyly.net/i/2025/09/23/496dbec9e18b6fe3275cb4800bbe9728-0.webp)
+
+![image-20250923161224103](https://image.hyly.net/i/2025/09/23/8a0daecb98d6bce43aec8c8184b864db-0.webp)
+
+
+
+![image-20250923161243048](https://image.hyly.net/i/2025/09/23/4c5dbd962c4301bd9c2b85381ddba836-0.webp)
+
+![image-20250923161320686](https://image.hyly.net/i/2025/09/23/000a9365baa2b359315c3a76f9169425-0.webp)
+
+![image-20250923161327574](https://image.hyly.net/i/2025/09/23/943bbf4a99574748c884a0473abbbf36-0.webp)
+
+![](https://image.hyly.net/i/2025/09/23/44f5fffc43d68b5ea4505ac573daa4ba-0.webp)
+
+### redis做为缓存，数据的持久化是怎么做的？
+
+#### RDB
+
+![image-20250923161408721](https://image.hyly.net/i/2025/09/23/aa4bea96cc9b72b60b0885d3f10646e2-0.webp)
+
+![image-20250923161425650](https://image.hyly.net/i/2025/09/23/69f3b4306c6940cbef6b5ffbf2bd207f-0.webp)
+
+#### AOF
+
+![image-20250923161437497](https://image.hyly.net/i/2025/09/23/c2f353bfca0845a469c12fb032309a11-0.webp)
+
+![image-20250923161452483](https://image.hyly.net/i/2025/09/23/1ae2c007f2d4feff4fd76de9741cdb9b-0.webp)
+
+![image-20250923161526635](https://image.hyly.net/i/2025/09/23/bda3c987a77dd0e4c84cb10c44790061-0.webp)
+
+#### RDB和AOF对比
+
+![image-20250923161552013](https://image.hyly.net/i/2025/09/23/302cf0106eb750153636fcdc4513f328-0.webp)
+
+![image-20250923161614791](https://image.hyly.net/i/2025/09/23/dbd88a6e8c2a7edcdbd591421a5fc19d-0.webp)
+
+### Redis数据删除策略
+
+![image-20250923161659771](https://image.hyly.net/i/2025/09/23/66275cf78d3b5448f3eced230950d362-0.webp)
+
+![image-20250923161722779](https://image.hyly.net/i/2025/09/23/285930091c05e46f09db804024caba6c-0.webp)
+
+![image-20250923161749342](https://image.hyly.net/i/2025/09/23/13f5e01c22f317dea12f24352612d251-0.webp)
+
+![image-20250923161805659](https://image.hyly.net/i/2025/09/23/2de677ad2300fbb018e7efa6c4769a38-0.webp)
+
+![image-20250923161810886](https://image.hyly.net/i/2025/09/23/13e3d13073c116f406b84df6d358f4fb-0.webp)
+
+### 数据淘汰策略
+
+![image-20250923161903661](https://image.hyly.net/i/2025/09/23/f8155f4bea702c9ab5f1fcc41f81a31a-0.webp)
+
+![image-20250923161912314](https://image.hyly.net/i/2025/09/23/d8fc4a8ded8b98d779c72564df9cc6d1-0.webp)
+
+![image-20250923161931399](https://image.hyly.net/i/2025/09/23/78f15b8dc525bb90a82f130e61edfc6a-0.webp)
+
+![image-20250923161946677](https://image.hyly.net/i/2025/09/23/f75fe02bdc2c1fa14caf8943f31918c8-0.webp)
+
+![image-20250923161951386](https://image.hyly.net/i/2025/09/23/2183206fcc2a2babe6710779ffc21f35-0.webp)
+
+### Redis分布式锁
+
+![image-20250923162015845](https://image.hyly.net/i/2025/09/23/4ac857614f177d23dcbca2e19ea14870-0.webp)
+
+![image-20250923162029648](https://image.hyly.net/i/2025/09/23/da56fca5205d375a0f2503b4a7494bdf-0.webp)
+
+![image-20250923162041849](https://image.hyly.net/i/2025/09/23/7f950d9534e26d87ff0e1e7535789439-0.webp)
+
+![image-20250923162053358](https://image.hyly.net/i/2025/09/23/1fac74126b00c9e3ff3553146ee7efdd-0.webp)
+
+![image-20250923162103745](https://image.hyly.net/i/2025/09/23/5d0703af1c4e7239019bf3a5a4bc5397-0.webp)
+
+![image-20250923162124063](https://image.hyly.net/i/2025/09/23/20007fc3ee95e14fe8256f3e635e82ba-0.webp)
+
+![image-20250923162140395](https://image.hyly.net/i/2025/09/23/f7a01d863fafb1a69f47bad06e868116-0.webp)
+
+![image-20250923162155239](https://image.hyly.net/i/2025/09/23/29402da770aad77924589c88d85df362-0.webp)
+
+![image-20250923162233200](https://image.hyly.net/i/2025/09/23/fd99a264a6081c10423fb3cf045df208-0.webp)
+
+![image-20250923162250967](https://image.hyly.net/i/2025/09/23/d82ebe0ea0068f8a74af667a499a6973-0.webp)
+
+![image-20250923162308682](https://image.hyly.net/i/2025/09/23/cd27bb4ebff837aaf1bbd03940df29ce-0.webp)
+
+#### redission实现分布式锁
+
+![image-20250923162322787](https://image.hyly.net/i/2025/09/23/79363da76837b8223aae0554e575d0eb-0.webp)
+
+![image-20250923162337929](https://image.hyly.net/i/2025/09/23/76c1a96177c3d38792b2d326b733cd87-0.webp)
+
+![image-20250923162414282](https://image.hyly.net/i/2025/09/23/d3c1e6972febfcbafb96654ca25c34f9-0.webp)
+
+![image-20250923162427385](https://image.hyly.net/i/2025/09/23/958a4898f79a87284678b0a6f62a8a69-0.webp)
+
+![image-20250923162448350](https://image.hyly.net/i/2025/09/23/db75a7313d0325f99281418bcaf55bf5-0.webp)
+
+![image-20250923162456219](https://image.hyly.net/i/2025/09/23/7e7f1e68f59103df230c5995250652fa-0.webp)
+
+![image-20250923162510063](https://image.hyly.net/i/2025/09/23/a62fdb5f4a2aff96dc235797ba198652-0.webp)
+
+![image-20250923162515723](https://image.hyly.net/i/2025/09/23/3d33ed3555424fb3a247048328a2f075-0.webp)
+
+### Reids集群
+
+![image-20250923162545735](https://image.hyly.net/i/2025/09/23/97eebb459859febe78e438b72bc0b82f-0.webp)
+
+![image-20250923162602620](https://image.hyly.net/i/2025/09/23/128a09fb3c215840521fc8e823706c70-0.webp)
+
+![image-20250923162618238](https://image.hyly.net/i/2025/09/23/628fcf6c321d0d07cd2bcbcd9d46e637-0.webp)
+
+![image-20250923162625981](https://image.hyly.net/i/2025/09/23/a1b428717bb1703137409dceb75d9ac2-0.webp)
+
+![image-20250923162641931](https://image.hyly.net/i/2025/09/23/0b004e1207435affe5b553b96ba41ae8-0.webp)
+
+![image-20250923162650246](https://image.hyly.net/i/2025/09/23/a3e4ea469c014a13d931fce87aee83b3-0.webp)
+
+![image-20250923162703901](https://image.hyly.net/i/2025/09/23/82511900e349f09ab711ec9023867692-0.webp)
+
+![image-20250923162730539](https://image.hyly.net/i/2025/09/23/d145ce90a73dec7a51d9296b528d8222-0.webp)
+
+![image-20250923162745405](https://image.hyly.net/i/2025/09/23/9b361fce43640f3f64a0c8b26c2b805f-0.webp)
+
+![image-20250923162758473](https://image.hyly.net/i/2025/09/23/c93abdc6bb9ea155087862d5dcf88a1e-0.webp)
+
+![image-20250923162810609](https://image.hyly.net/i/2025/09/23/b627d71777d0c669e5df059405fa7350-0.webp)
+
+![image-20250923162822927](https://image.hyly.net/i/2025/09/23/e291df13b6ffba1e78d0832c77502736-0.webp)
+
+![image-20250923162827827](https://image.hyly.net/i/2025/09/23/def40c9b4eb2900c8cf28c5e8fe2e6c6-0.webp)
+
+![image-20250923162842395](https://image.hyly.net/i/2025/09/23/bdbbaf91626d8bf0ecc3f48ca7f8f6f4-0.webp)
+
+![image-20250923162854941](https://image.hyly.net/i/2025/09/23/11cbc6e57aca27e098d4304a78407050-0.webp)
+
+![image-20250923163001054](https://image.hyly.net/i/2025/09/23/a05658c0238fcf7707b0011e7a566cb8-0.webp)
+
+![image-20250923163016546](https://image.hyly.net/i/2025/09/23/1dd92abff6a8f998ff78728937f95673-0.webp)
+
+### Redis I/O多路复用
+
+![image-20250923163039510](https://image.hyly.net/i/2025/09/23/dbf782be62ffbeb4212fb129c40685e6-0.webp)
+
+![image-20250923163124147](https://image.hyly.net/i/2025/09/23/8f55f97ec6140d6ce90df961f82826d7-0.webp)
+
+![image-20250923163136683](https://image.hyly.net/i/2025/09/23/5c927ede356df2a1994bb8cfaddc5ec7-0.webp)
+
+![image-20250923163150129](https://image.hyly.net/i/2025/09/23/b2b26d223babeb1ca933f18d7e28c92e-0.webp)
+
+![image-20250923163202233](https://image.hyly.net/i/2025/09/23/392addc62a25d6f7a857a094a5ebc963-0.webp)
+
+![image-20250923163219396](https://image.hyly.net/i/2025/09/23/493699f11c50f850082a3fce2a12e2a2-0.webp)
+
+![image-20250923163235421](https://image.hyly.net/i/2025/09/23/780fb0fca7900fbd7c046af2b83e4206-0.webp)
+
+![image-20250923163246833](https://image.hyly.net/i/2025/09/23/fa787bbb9e5387663b124e90c6aa0a3c-0.webp)
+
+![image-20250923163252171](https://image.hyly.net/i/2025/09/23/2525692005210d3454a7f1e06f3a3836-0.webp)
+
 ## 说一下你在项目中的redis的应用场景？
 
 1. 5大value类型：
