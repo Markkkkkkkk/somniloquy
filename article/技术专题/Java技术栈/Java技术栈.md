@@ -11,11 +11,15 @@ status: publish
 
 以下这些资料是我根据上面这个视频再加上平时遇到觉得重要的总结的 ：
 
-1. Java基础面试题
-2. [Mysql面试题](https://hyly.net/article/code/java/510)
-3. [Redis面试题](https://hyly.net/article/code/java/506)
-4. [ElasticSearch面试题](https://hyly.net/article/code/java/503)
-5. Redis
+1. [Java基础面试题汇总](https://hyly.net/article/code/java/514)
+2. [Java多线程与高并发面试题汇总](https://hyly.net/article/code/java/553)
+3. [JVM调优面试题汇总](https://hyly.net/article/code/java/516)
+4. [Java设计模式面试题汇总](https://hyly.net/article/code/java/554)
+5. [Java框架篇&微服务篇面试题汇总](https://hyly.net/article/code/java/551)
+6. [MySQL面试题汇总](https://hyly.net/article/code/java/510)
+7. [Redis面试题汇总](https://hyly.net/article/code/java/506)
+8. [消息队列RabbitMQ&Kafka面试题汇总](https://hyly.net/article/code/java/552)
+9. [ElasticSearch面试题汇总](https://hyly.net/article/code/java/503)
 
 ## MySQL
 
