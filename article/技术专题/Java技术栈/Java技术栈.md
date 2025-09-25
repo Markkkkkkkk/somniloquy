@@ -71,6 +71,8 @@ status: publish
 
 <a href="https://www.bilibili.com/video/BV1Gh411j7d6" target="_blank">视频地址</a>
 
+[ElasticSearch从入门到实战](https://hyly.net/test/573)
+
 ## Kubernetes
 
 **简介**：用于管理云平台中多个主机上的容器化应用，让部署容器化的应用简单并且高效。
