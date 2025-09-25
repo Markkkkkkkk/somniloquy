@@ -1,6 +1,6 @@
 ---
 category: [Java技术栈]
-tag: [apollo,,配置中心,面试]
+tag: [apollo,配置中心,面试]
 postType: post
 status: publish
 ---
