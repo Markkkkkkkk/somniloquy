@@ -1,6 +1,6 @@
 ---
 category: [Java技术栈]
-tag: [JVM,调优,面试]
+tag: [JVM,虚拟机,调优,面试]
 postType: post
 status: publish
 ---

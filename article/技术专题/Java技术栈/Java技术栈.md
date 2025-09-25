@@ -39,19 +39,19 @@ status: publish
 
 <a href="https://www.bilibili.com/video/BV19y4y1b7Uo" target="_blank">视频地址</a>
 
-<a href="https://kdocs.cn/l/cbDSjvAuTrE8" target="_blank">点击查看资料</a>
+[Kafka零基础入门到实战资料](https://hyly.net/article/code/java/556)
 
 ## JVM
 
 **简介**：Java运行虚拟机。
 
-<a href="https://www.bilibili.com/video/BV1yE411Z7AP" target="_blank">视频地址</a>
+<a href="https://www.bilibili.com/video/BV1r94y1b7eS" target="_blank">视频地址</a>
 
 ## Zookeeper
 
 **简介**：分布式协调中间件，为分布式应用提供一致性服务的工具。
 
-<a href="https://www.bilibili.com/video/BV1M741137qY" target="_blank">视频地址</a>
+<a href="https://www.bilibili.com/video/BV1M741137qY" target="_blank">视频地址</a> 
 
 <a href="https://kdocs.cn/l/clsYe41L55Ww" target="_blank">点击查看资料</a>
 

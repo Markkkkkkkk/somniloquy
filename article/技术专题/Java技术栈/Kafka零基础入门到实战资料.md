@@ -1,6 +1,6 @@
 ---
 category: [Java技术栈]
-tag: [kafka,入门到实战,面试]
+tag: [kafka,零基础,入门到实战]
 postType: post
 status: publish
 ---
