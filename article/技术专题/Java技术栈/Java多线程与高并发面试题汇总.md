@@ -2721,7 +2721,6 @@ synchronized时当程序出现异常时，会释放锁，会引起其他线程�
 
 4. ![image-20220227174414968](https://image.hyly.net/i/2025/09/22/27d6e83e29293e8ebc54ef0ebc366b6d-0.webp)
 
-	[CAS，ABA问题详见](https://blog.csdn.net/wufaliang003/article/details/78797203)
 
 ## JUC同步工具
 

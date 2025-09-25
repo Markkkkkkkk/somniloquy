@@ -47,6 +47,16 @@ status: publish
 
 <a href="https://www.bilibili.com/video/BV1r94y1b7eS" target="_blank">视频地址</a>
 
+[JVM虚拟机零基础从入门到实战基础篇](https://hyly.net/article/code/java/564)
+
+[JVM虚拟机零基础从入门到实战实战篇](https://hyly.net/article/code/java/563)
+
+[JVM虚拟机零基础从入门到实战高级篇](https://hyly.net/article/code/java/565)
+
+[JVM虚拟机零基础从入门到实战原理篇](https://hyly.net/article/code/java/566)
+
+[JVM虚拟机零基础从入门到实战面试篇](https://hyly.net/article/code/java/562)
+
 ## Zookeeper
 
 **简介**：分布式协调中间件，为分布式应用提供一致性服务的工具。
