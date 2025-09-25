@@ -155,11 +155,11 @@ kubernetes有多种部署方式，目前主流的方式有kubeadm、minikube、�
 
 #### 主机规划
 
-| 作用   | IP地址          | 操作系统                    | 配置                     |
-| ------ | --------------- | --------------------------- | ------------------------ |
-| Master | 192.168.109.101 | Centos7.5    基础设施服务器 | 2颗CPU  2G内存   50G硬盘 |
-| Node1  | 192.168.109.102 | Centos7.5    基础设施服务器 | 2颗CPU  2G内存   50G硬盘 |
-| Node2  | 192.168.109.103 | Centos7.5    基础设施服务器 | 2颗CPU  2G内存   50G硬盘 |
+<figure class='table-figure'><table>
+<thead>
+<tr><th>作用</th><th>IP地址</th><th>操作系统</th><th>配置</th></tr></thead>
+<tbody><tr><td>Master</td><td>192.168.109.101</td><td>Centos7.5    基础设施服务器</td><td>2颗CPU  2G内存   50G硬盘</td></tr><tr><td>Node1</td><td>192.168.109.102</td><td>Centos7.5    基础设施服务器</td><td>2颗CPU  2G内存   50G硬盘</td></tr><tr><td>Node2</td><td>192.168.109.103</td><td>Centos7.5    基础设施服务器</td><td>2颗CPU  2G内存   50G硬盘</td></tr></tbody>
+</table></figure>
 
 ### 环境搭建
 
@@ -607,11 +607,14 @@ address: [顺义,昌平]
 
 	`kubectl apply -f nginx-pod.yaml`
 
-| 类型           | 操作对象 | 适用环境 | 优点           | 缺点                             |
-| -------------- | -------- | -------- | -------------- | -------------------------------- |
-| 命令式对象管理 | 对象     | 测试     | 简单           | 只能操作活动对象，无法审计、跟踪 |
-| 命令式对象配置 | 文件     | 开发     | 可以审计、跟踪 | 项目大时，配置文件多，操作麻烦   |
-| 声明式对象配置 | 目录     | 开发     | 支持目录操作   | 意外情况下难以调试               |
+```HTML
+<figure class='table-figure'><table>
+<thead>
+<tr><th>类型</th><th>操作对象</th><th>适用环境</th><th>优点</th><th>缺点</th></tr></thead>
+<tbody><tr><td>命令式对象管理</td><td>对象</td><td>测试</td><td>简单</td><td>只能操作活动对象，无法审计、跟踪</td></tr><tr><td>命令式对象配置</td><td>文件</td><td>开发</td><td>可以审计、跟踪</td><td>项目大时，配置文件多，操作麻烦</td></tr><tr><td>声明式对象配置</td><td>目录</td><td>开发</td><td>支持目录操作</td><td>意外情况下难以调试</td></tr></tbody>
+</table></figure>
+
+```
 
 #### 命令式对象管理
 
@@ -652,26 +655,11 @@ kubectl api-resources
 
 经常使用的资源有下面这些：
 
-| 资源分类      | 资源名称                 | 缩写   | 资源作用        |
-| ------------- | ------------------------ | ------ | --------------- |
-| 集群级别资源  | nodes                    | no     | 集群组成部分    |
-| 集群级别资源  | namespaces               | ns     | 隔离Pod         |
-| pod资源       | pods                     | po     | 装载容器        |
-| pod资源控制器 | replicationcontrollers   | rc     | 控制pod资源     |
-| pod资源控制器 | replicasets              | rs     | 控制pod资源     |
-| pod资源控制器 | deployments              | deploy | 控制pod资源     |
-| pod资源控制器 | daemonsets               | ds     | 控制pod资源     |
-| pod资源控制器 | jobs                     |        | 控制pod资源     |
-| pod资源控制器 | cronjobs                 | cj     | 控制pod资源     |
-| pod资源控制器 | horizontalpodautoscalers | hpa    | 控制pod资源     |
-| pod资源控制器 | statefulsets             | sts    | 控制pod资源     |
-| 服务发现资源  | services                 | svc    | 统一pod对外接口 |
-| 服务发现资源  | ingress                  | ing    | 统一pod对外接口 |
-| 存储资源      | volumeattachments        |        | 存储            |
-| 存储资源      | persistentvolumes        | pv     | 存储            |
-| 存储资源      | persistentvolumeclaims   | pvc    | 存储            |
-| 配置资源      | configmaps               | cm     | 配置            |
-| 配置资源      | secrets                  |        | 配置            |
+<figure class='table-figure'><table>
+<thead>
+<tr><th>资源分类</th><th>资源名称</th><th>缩写</th><th>资源作用</th></tr></thead>
+<tbody><tr><td>集群级别资源</td><td>nodes</td><td>no</td><td>集群组成部分</td></tr><tr><td>集群级别资源</td><td>namespaces</td><td>ns</td><td>隔离Pod</td></tr><tr><td>pod资源</td><td>pods</td><td>po</td><td>装载容器</td></tr><tr><td>pod资源控制器</td><td>replicationcontrollers</td><td>rc</td><td>控制pod资源</td></tr><tr><td>pod资源控制器</td><td>replicasets</td><td>rs</td><td>控制pod资源</td></tr><tr><td>pod资源控制器</td><td>deployments</td><td>deploy</td><td>控制pod资源</td></tr><tr><td>pod资源控制器</td><td>daemonsets</td><td>ds</td><td>控制pod资源</td></tr><tr><td>pod资源控制器</td><td>jobs</td><td>&nbsp;</td><td>控制pod资源</td></tr><tr><td>pod资源控制器</td><td>cronjobs</td><td>cj</td><td>控制pod资源</td></tr><tr><td>pod资源控制器</td><td>horizontalpodautoscalers</td><td>hpa</td><td>控制pod资源</td></tr><tr><td>pod资源控制器</td><td>statefulsets</td><td>sts</td><td>控制pod资源</td></tr><tr><td>服务发现资源</td><td>services</td><td>svc</td><td>统一pod对外接口</td></tr><tr><td>服务发现资源</td><td>ingress</td><td>ing</td><td>统一pod对外接口</td></tr><tr><td>存储资源</td><td>volumeattachments</td><td>&nbsp;</td><td>存储</td></tr><tr><td>存储资源</td><td>persistentvolumes</td><td>pv</td><td>存储</td></tr><tr><td>存储资源</td><td>persistentvolumeclaims</td><td>pvc</td><td>存储</td></tr><tr><td>配置资源</td><td>configmaps</td><td>cm</td><td>配置</td></tr><tr><td>配置资源</td><td>secrets</td><td>&nbsp;</td><td>配置</td></tr></tbody>
+</table></figure>
 
 **操作**
 
@@ -683,28 +671,11 @@ kubectl --help
 
 经常使用的操作有下面这些：
 
-| 命令分类   | 命令         | 翻译     | 命令作用                     |
-| ---------- | ------------ | -------- | ---------------------------- |
-| 基本命令   | create       | 创建     | 创建一个资源                 |
-| 基本命令   | edit         | 编辑     | 编辑一个资源                 |
-| 基本命令   | get          | 获取     | 获取一个资源                 |
-| 基本命令   | patch        | 更新     | 更新一个资源                 |
-| 基本命令   | delete       | 删除     | 删除一个资源                 |
-| 基本命令   | explain      | 解释     | 展示资源文档                 |
-| 运行和调试 | run          | 运行     | 在集群中运行一个指定的镜像   |
-| 运行和调试 | expose       | 暴露     | 暴露资源为Service            |
-| 运行和调试 | describe     | 描述     | 显示资源内部信息             |
-| 运行和调试 | logs         | 日志     | 输出容器在 pod 中的日志      |
-| 运行和调试 | attach       | 缠绕     | 进入运行中的容器             |
-| 运行和调试 | exec         | 执行     | 执行容器中的一个命令         |
-| 运行和调试 | cp           | 复制     | 在Pod内外复制文件            |
-| 运行和调试 | rollout      | 首次展示 | 管理资源的发布               |
-| 运行和调试 | scale        | 规模     | 扩(缩)容Pod的数量            |
-| 运行和调试 | autoscale    | 自动调整 | 自动调整Pod的数量            |
-| 高级命令   | apply        | rc       | 通过文件对资源进行配置       |
-| 高级命令   | label        | 标签     | 更新资源上的标签             |
-| 其他命令   | cluster-info | 集群信息 | 显示集群信息                 |
-| 其他命令   | version      | 版本     | 显示当前Server和Client的版本 |
+<figure class='table-figure'><table>
+<thead>
+<tr><th>命令分类</th><th>命令</th><th>翻译</th><th>命令作用</th></tr></thead>
+<tbody><tr><td>基本命令</td><td>create</td><td>创建</td><td>创建一个资源</td></tr><tr><td>基本命令</td><td>edit</td><td>编辑</td><td>编辑一个资源</td></tr><tr><td>基本命令</td><td>get</td><td>获取</td><td>获取一个资源</td></tr><tr><td>基本命令</td><td>patch</td><td>更新</td><td>更新一个资源</td></tr><tr><td>基本命令</td><td>delete</td><td>删除</td><td>删除一个资源</td></tr><tr><td>基本命令</td><td>explain</td><td>解释</td><td>展示资源文档</td></tr><tr><td>运行和调试</td><td>run</td><td>运行</td><td>在集群中运行一个指定的镜像</td></tr><tr><td>运行和调试</td><td>expose</td><td>暴露</td><td>暴露资源为Service</td></tr><tr><td>运行和调试</td><td>describe</td><td>描述</td><td>显示资源内部信息</td></tr><tr><td>运行和调试</td><td>logs</td><td>日志</td><td>输出容器在 pod 中的日志</td></tr><tr><td>运行和调试</td><td>attach</td><td>缠绕</td><td>进入运行中的容器</td></tr><tr><td>运行和调试</td><td>exec</td><td>执行</td><td>执行容器中的一个命令</td></tr><tr><td>运行和调试</td><td>cp</td><td>复制</td><td>在Pod内外复制文件</td></tr><tr><td>运行和调试</td><td>rollout</td><td>首次展示</td><td>管理资源的发布</td></tr><tr><td>运行和调试</td><td>scale</td><td>规模</td><td>扩(缩)容Pod的数量</td></tr><tr><td>运行和调试</td><td>autoscale</td><td>自动调整</td><td>自动调整Pod的数量</td></tr><tr><td>高级命令</td><td>apply</td><td>rc</td><td>通过文件对资源进行配置</td></tr><tr><td>高级命令</td><td>label</td><td>标签</td><td>更新资源上的标签</td></tr><tr><td>其他命令</td><td>cluster-info</td><td>集群信息</td><td>显示集群信息</td></tr><tr><td>其他命令</td><td>version</td><td>版本</td><td>显示当前Server和Client的版本</td></tr></tbody>
+</table></figure>
 
 下面以一个namespace / pod的创建和删除简单演示下命令的使用：
 

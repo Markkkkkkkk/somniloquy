@@ -79,6 +79,8 @@ status: publish
 
 <a href="https://www.bilibili.com/video/BV1cK4y1L7Am" target="_blank">视频地址</a>
 
+[kubernetes零基础入门到实战资料](https://hyly.net/article/code/java/580)
+
 ## Apollo
 
 **简介**：微服务配置管理中心。
