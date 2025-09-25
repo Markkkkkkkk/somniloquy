@@ -87,6 +87,8 @@ status: publish
 
 <a href="https://www.bilibili.com/video/BV1eE41187sS" target="_blank">视频地址</a>
 
+[Apollo配置中心零基础入门到实战](https://hyly.net/article/code/java/586)
+
 ## Skywalking
 
 **简介**：微服务全链路监控系统，分布式追踪，性能指标分析和服务依赖分析。
