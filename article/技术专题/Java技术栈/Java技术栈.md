@@ -63,7 +63,7 @@ status: publish
 
 <a href="https://www.bilibili.com/video/BV1M741137qY" target="_blank">视频地址</a> 
 
-<a href="https://kdocs.cn/l/clsYe41L55Ww" target="_blank">点击查看资料</a>
+[Zookeeper分布式协调中间件从入门到实战](https://hyly.net/article/code/java/569)
 
 ## Elasticsearch
 
