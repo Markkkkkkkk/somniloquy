@@ -123,6 +123,8 @@ Java整体生态是一个庞大的系统，想要有整体认识的，也强烈�
 
 [尚硅谷ShardingSphere5实战教程（快速入门掌握核心）](https://www.bilibili.com/video/BV1ta411g7Jf)
 
+[ShardingSphere5零基础入门到实战](https://hyly.net/article/code/java/606)
+
 [深入Sharding-JDBC分库分表从入门到精通【黑马程序员】](https://www.bilibili.com/video/BV1jJ411M78w)
 
 [文档地址](https://www.kdocs.cn/l/cpgZ7lUA9lKx)
