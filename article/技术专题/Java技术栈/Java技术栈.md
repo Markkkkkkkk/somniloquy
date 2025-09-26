@@ -35,11 +35,23 @@ status: publish
 
 ## Kafka
 
-**简介**：高吞吐量消息队列。
+**简介**：高吞吐量消息队列。常用于大数据领域做消息队列。
 
 <a href="https://www.bilibili.com/video/BV19y4y1b7Uo" target="_blank">视频地址</a>
 
 [Kafka零基础入门到实战资料](https://hyly.net/article/code/java/556)
+
+## Pulsar
+
+**简介**：消息队列中间件。因为存算分离，可以搭配k8s，所以是云原生时代的多租户、无限存储方案。
+
+<a href="https://www.bilibili.com/video/BV1CF411v7Dh" target="_blank">视频地址</a>
+
+## RocketMQ
+
+**简介：**适合高并发交易、金融、电商、分布式系统的消息队列中间件。
+
+[视频地址](https://www.bilibili.com/video/BV1L4411y7mn)
 
 ## JVM
 
@@ -95,11 +107,17 @@ status: publish
 
 <a href="https://www.bilibili.com/video/BV1ZJ411s7Mn" target="_blank">视频地址</a>
 
+[Skywalking零基础入门到实战](https://hyly.net/article/code/java/591)
+
 ## ShardingSphere
 
 **简介**：分布式数据库中间件，结合MySQL使用。
 
-<a href="https://www.bilibili.com/video/BV1ta411g7Jf" target="_blank">视频地址</a>
+[尚硅谷ShardingSphere5实战教程（快速入门掌握核心）](https://www.bilibili.com/video/BV1ta411g7Jf)
+
+[深入Sharding-JDBC分库分表从入门到精通【黑马程序员】](https://www.bilibili.com/video/BV1jJ411M78w)
+
+[文档地址](https://www.kdocs.cn/l/cpgZ7lUA9lKx)
 
 ## Ansible
 
@@ -113,11 +131,7 @@ status: publish
 
 <a href="https://www.bilibili.com/video/BV1n84y1i7td" target="_blank">视频地址</a>
 
-## Pulsar
 
-**简介**：消息队列中间件。
-
-<a href="https://www.bilibili.com/video/BV1CF411v7Dh" target="_blank">视频地址</a>
 
 
 
