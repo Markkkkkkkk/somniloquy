@@ -21,6 +21,12 @@ status: publish
 8. [消息队列RabbitMQ&Kafka面试题汇总](https://hyly.net/article/code/java/552)
 9. [ElasticSearch面试题汇总](https://hyly.net/article/code/java/503)
 
+## 架构&规范
+
+在看下面资料之前，建议大家可以先看下[Java开发手册(黄山版)](https://www.kdocs.cn/l/cnccNGUeAXJw)，这是阿里出的，没必要严格遵守，但参考还是可以的，大家也可以看其它版本的开发规范。它也有相关的IDEA插件，也是可以落地的。
+
+Java整体生态是一个庞大的系统，想要有整体认识的，也强烈安利大家看下[凤凰架构](https://icyfenix.cn/)，相信大家看完之后就会有整体的认识，就算细枝末节不太清楚，那也无关大雅，知道方向之后，剩下的就好办了。
+
 ## MySQL
 
 **简介**：目前最流行的关系型数据库管理系统之一。
@@ -52,6 +58,8 @@ status: publish
 **简介：**适合高并发交易、金融、电商、分布式系统的消息队列中间件。
 
 [视频地址](https://www.bilibili.com/video/BV1L4411y7mn)
+
+[RocketMQ零基础入门到实战](https://hyly.net/article/code/java/599)
 
 ## JVM
 
