@@ -1,4 +1,9 @@
- 
+---
+category: [大数据技术栈]
+tag: [Sqoop,大数据,任务流调度]
+postType: post
+status: publish
+---
 
 ## Apache Sqoop
 
