@@ -1,6 +1,6 @@
 ---
 category: [大数据技术栈]
-tag: [Sqoop,大数据,实时,采集]
+tag: [Canal,大数据,实时,采集]
 postType: post
 status: publish
 ---

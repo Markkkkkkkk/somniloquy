@@ -1,6 +1,6 @@
 ---
 category: [大数据技术栈]
-tag: [Sqoop,大数据,离线,采集
+tag: [Sqoop,大数据,离线,采集]
 postType: post
 status: publish
 ---
