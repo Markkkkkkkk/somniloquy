@@ -1010,7 +1010,7 @@ public class ShardingTest {
 
 #### 常见错误
 
-![image-20220810163534068](assets/image-20220810163534068.png)
+![image-20220810163534068](https://image.hyly.net/i/2025/09/27/ac23342721b530452260185633f5ecea-0.webp)
 
 ShardingSphere-JDBC远程连接的方式默认的密码加密规则是：mysql_native_password
 
