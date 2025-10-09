@@ -139,10 +139,6 @@ Tracing的最大特点就是，它在单次请求的范围内，处理信息。 
 总结，Metric主要用来进行数据的统计，比如HTTP请求数的计算。Tracing主要包含了某一次请
 求的链路数据。
 
-详细的内容可以查看Skywalking开发者吴晟翻译的文章，Metrics, tracing 和 logging 的关系 ：
-
-http://blog.oneapm.com/apm-tech/811.html
-
 整体架构包含如下三个组成部分：
 
 1. 探针(agent)负责进行数据的收集，包含了Tracing和Metrics的数据，agent会被安装到服务所在的

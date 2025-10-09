@@ -2433,7 +2433,7 @@ cassandra提供了类似jdbcpreparedstatement使用预编译占位符。官方�
 
 官网对相关环境的要求：
 
-> Spring Data for Apache Cassandra 2.x binaries require JDK level 8.0 and later and [Spring Framework](https://spring.io/docs) 5.2.7.RELEASE and later.
+> Spring Data for Apache Cassandra 2.x binaries require JDK level 8.0 and later and Spring Framework 5.2.7.RELEASE and later.
 >
 > It requires [Cassandra](https://cassandra.apache.org/) 2.0 or later
 
