@@ -35,8 +35,8 @@ status: publish
 	7. [Wordpress及第三方支持工具docker容器化搭建](https://hyly.net/article/code/wordpress/378)
 	8. [Argon主题评论邮件通知退订页面404解决](https://hyly.net/article/code/wordpress/357)
 
-2. Java技术栈
-3. 大数据技术栈
+2. [Java技术栈](https://hyly.net/article/code/java/509)
+3. [大数据技术栈](https://hyly.net/article/code/bigdata/519)
 
 ## 资料入选规则
 
