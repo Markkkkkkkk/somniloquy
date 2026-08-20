@@ -40,8 +40,6 @@ status: publish
 Error from server (InternalError): error creating service: Internal error occurred: failed to allocate a serviceIP: range is full
 ```
 
-
-
 ## 解决方案
 
 遇到cluster_cidr不足时还能通过在后边增加、service_cidr则就不能增加，只能重建集群了，带来的影响是不可估量的，如果使用了ArgoCD自动化部署工具，并且服务实现了helm脚本，则迁移集群的复杂度则会大大降低。
